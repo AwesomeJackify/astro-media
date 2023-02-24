@@ -13,11 +13,13 @@ module.exports = {
       },
       textColor: {
         default: "var(--color-text)",
+        flip: "var(--color-text-flip)",
         offset: "var(--color-text-offset)",
       },
       backgroundColor: {
         default: "var(--color-background)",
         offset: "var(--color-background-offset)",
+        flip: "var(--color-background-flip)",
       },
       borderColor: {
         default: "var(--color-border)",

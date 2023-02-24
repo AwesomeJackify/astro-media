@@ -3,28 +3,28 @@ import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
 ---
 
-<ContentSection title="Just ship less" id="intro">
+<ContentSection title="Unleash Growth" id="intro">
   <Icon slot="eyebrow" name="logomark" class="h-32" />
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    Marketing and website design are essential components for achieving
+    <span class="text-primary">long term</span> business growth. However, most small
+    businsses lack a digital footprint in the <span class="text-primary"
+      >modern</span
+    > age. If this sounds like <span class="text-primary">you</span>, potential
+    revenue may be untapped.
   </Fragment>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
-  </div>
+  <figure
+    class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
+  >
+    <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
+      <h3 class="font-semibold text-lg">
+        "No business, whether you’re part-time, self-employed, a start-up or you
+        have a large staff, can afford to be without a digital presence."
+      </h3>
+    </blockquote>
+    <img
+      src="/src/assets/business-govt-nz.png"
+      class="w-40 rounded-2xl bg-default p-3 px-4"
+    />
+  </figure>
 </ContentSection>
