@@ -11,15 +11,16 @@ const features: Array<FeatureItem> = [
     icon: "mdi:handshake",
   },
   {
-    title: "Online Branding and Marketing",
+    title: "Branding",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Whether you're launching a new business or looking to refresh your brand, having a strong and recognisable digital presence will \
+      create a lasting impression.",
     icon: "mdi:feather",
   },
   {
     title: "SEO",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
+      "Optimise your business for search engines to boost online visibility so that customers will be able to find you more easily.",
     icon: "mdi:directions-fork",
   },
 ];
@@ -27,20 +28,21 @@ const features: Array<FeatureItem> = [
 
 <ContentSection title="Features" id="features">
   <Fragment slot="lead">
-    Astro comes <span class="text-primary">batteries included</span>. It takes
-    the best parts of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">innovations</span>.
+    <span class="text-primary">Upgrade</span> your business with our powerful features,
+    <span class="text-primary">tailored</span> to enhance your operations and drive
+    growth. Experience the difference and see your business <span
+      class="text-primary">thrive</span
+    >.
   </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary">
+        <li class="border-default bg-offset flex flex-col items-center gap-4 border p-6">
+          <div class="border-primary text-primary h-16 w-16 rounded-full border-2 p-3">
             <Icon name={icon} />
           </div>
-          <p class="text-center font-extrabold text-xl">{title}</p>
-          <p class="text-center text-offset text-sm">{description}</p>
+          <p class="text-center text-xl font-extrabold">{title}</p>
+          <p class="text-offset text-center text-sm">{description}</p>
         </li>
       ))
     }
