@@ -5,7 +5,7 @@ import ContentSection from "./content-section.astro";
 <ContentSection title="Contact Us" id="contact-us">
   <Fragment slot="lead">
     <form data-netlify="true">
-      <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="grid text-default md:grid-cols-2 md:gap-6">
         <div class="group relative z-0 mb-6 w-full">
           <input
             type="text"
@@ -71,6 +71,7 @@ import ContentSection from "./content-section.astro";
         <div class="group relative z-0 mb-6 w-full">
           <textarea
             id="message"
+            name="message"
             rows="2"
             class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
             placeholder=" "></textarea>
