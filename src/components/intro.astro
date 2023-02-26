@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
 import ContentSection from "~/components/content-section.astro";
+import quoteLogo from "../assets/business-govt-nz.png";
 ---
 
 <ContentSection title="Unleash growth" id="intro-section-1">
@@ -21,9 +23,10 @@ import ContentSection from "~/components/content-section.astro";
         have a large staff, can afford to be without a digital presence."
       </h3>
     </blockquote>
-    <img
-      src="/src/assets/business-govt-nz.png"
+    <Image
+      src={quoteLogo}
       class="w-40 rounded-2xl bg-default p-3 px-4"
+      alt="business.govt.nz logo"
     />
   </figure>
 </ContentSection>
