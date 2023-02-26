@@ -4,14 +4,14 @@ import ContentSection from "./content-section.astro";
 
 <ContentSection title="Contact Us" id="contact-us">
   <Fragment slot="lead">
-    <form data-netlify="true">
-      <div class="grid text-default md:grid-cols-2 md:gap-6">
+    <form data-netlify="true" name="Astro Media Contact">
+      <div class="grid md:grid-cols-2 md:gap-6">
         <div class="group relative z-0 mb-6 w-full">
           <input
             type="text"
             name="floating_first_name"
             id="floating_first_name"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
             placeholder=" "
             required
           />
@@ -26,7 +26,7 @@ import ContentSection from "./content-section.astro";
             type="text"
             name="floating_last_name"
             id="floating_last_name"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
             placeholder=" "
             required
           />
@@ -58,7 +58,7 @@ import ContentSection from "./content-section.astro";
             type="tel"
             name="floating_phone"
             id="floating_phone"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent fill-white py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
             placeholder=" "
             required
           />
@@ -73,7 +73,7 @@ import ContentSection from "./content-section.astro";
             id="message"
             name="message"
             rows="2"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
             placeholder=" "
             required></textarea>
           <label
