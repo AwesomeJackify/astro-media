@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627 894" fill="none">
   <style>
     #letter-a {
-      fill: black;
+      fill: #ff5d01;
     }
     @media (prefers-color-scheme: dark) {
       #letter-a {
-        fill: white;
+        fill: #ff5d01;
       }
     }
   </style>
