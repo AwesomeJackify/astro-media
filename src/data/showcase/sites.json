@@ -13,5 +13,20 @@
     "title": "Gyros Kebabs",
     "image": "./images/gyros-kebabs.png",
     "url": "https://lovely-jalebi-ba408c.netlify.app/"
+  },
+  {
+    "title": "Pro-File",
+    "image": "./images/pro-file.png",
+    "url": "https://pro-file.littlesticks.site/"
+  },
+  {
+    "title": "Uzair Ahmed",
+    "image": "./images/uzair.png",
+    "url": "https://astro-portfolio-uzair.vercel.app/"
+  },
+  {
+    "title": "Ema Suriano",
+    "image": "./images/emasuriano.png",
+    "url": "https://art.emasuriano.com/"
   }
 ]
