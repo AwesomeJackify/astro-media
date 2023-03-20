@@ -1,18 +1,26 @@
 ---
+import ThreeJs from "./three-js.astro";
 ---
 
 <section class="relative h-screen bg-black">
   <div
     class="hero flex h-full flex-1 flex-col items-center justify-center px-4"
   >
-    <h1 class="gradient-text ml-8 font-extrabold tracking-tighter text-8xl">
-      Web Design that<br /> Converts
-    </h1>
-    <h3
-      class="gradient-text-subtitle-1 mt-8 ml-8 text-center font-bold tracking-tighter text-lg md:text-left md:text-xl"
+    <div
+      class="absolute top-0 left-0 z-0 flex h-full w-full items-center justify-center lg:block"
     >
-      Unleashing the Online Potential of New Zealand's Businesses, Artists, and
-      Visionaries.
-    </h3>
+      <ThreeJs client:load />
+    </div>
+    <div class="relative z-10">
+      <h1 class="gradient-text ml-8 font-extrabold tracking-tighter text-8xl">
+        Web Design that<br /> Converts
+      </h1>
+      <h3
+        class="gradient-text-subtitle-1 mt-8 ml-8 text-center font-bold tracking-tighter text-lg md:text-left md:text-xl"
+      >
+        Unleashing the Online Potential of New Zealand's Businesses, Artists,
+        and Visionaries.
+      </h3>
+    </div>
   </div>
 </section>
