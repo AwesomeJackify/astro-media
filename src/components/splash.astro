@@ -1,56 +1,18 @@
 ---
 ---
 
-<section class="relative h-full bg-black">
-  <div class="hero relative flex h-full flex-col items-center justify-center">
-    <h1
-      class="gradient-text ml-8 h-32 font-extrabold tracking-tighter text-8xl"
-    >
-      Web Design that Converts
+<section class="relative h-screen bg-black">
+  <div
+    class="hero flex h-full flex-1 flex-col items-center justify-center px-4"
+  >
+    <h1 class="gradient-text ml-8 font-extrabold tracking-tighter text-8xl">
+      Web Design that<br /> Converts
     </h1>
     <h3
-      class="gradient-text-subtitle-1 text-1xl ml-8 font-bold tracking-tighter"
+      class="gradient-text-subtitle-1 mt-8 ml-8 text-center font-bold tracking-tighter text-lg md:text-left md:text-xl"
     >
       Unleashing the Online Potential of New Zealand's Businesses, Artists, and
       Visionaries.
     </h3>
   </div>
-
-  <noscript>
-    <style>
-      #splash-bg-fallback {
-        display: block;
-      }
-    </style>
-  </noscript>
-
-  <style>
-    @keyframes float {
-      0% {
-        transform: translate3d(0, 0, 0);
-      }
-
-      100% {
-        transform: translate3d(0, 30px, 0);
-      }
-    }
-
-    #astronaut {
-      animation: float linear 2.5s infinite alternate;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      #astronaut {
-        @apply animate-none;
-      }
-
-      :global(#starfield) {
-        @apply hidden;
-      }
-
-      #splash-bg-fallback {
-        @apply block;
-      }
-    }
-  </style>
 </section>
