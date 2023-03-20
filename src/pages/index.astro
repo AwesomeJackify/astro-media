@@ -9,6 +9,7 @@ import Splash from "~/components/splash.astro";
 import Testimonials from "~/components/testimonials.astro";
 import ContactUs from "~/components/contact-us.astro";
 import Demos from "../components/demos.astro";
+import Content from "~/components/content.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -22,12 +23,22 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={generator} />
 
     <title>Astro Media</title>
@@ -72,9 +83,10 @@ const description =
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <Intro />
-      <Features />
+      <!-- <Content /> -->
+      <!-- <Features /> -->
       <!-- <Testimonials /> -->
-      <Demos/>
+      <Demos />
       <!-- <Showcase /> -->
       <ContactUs />
     </div>
