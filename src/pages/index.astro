@@ -5,11 +5,12 @@ import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import Showcase from "~/components/showcase.astro";
-import Splash from "~/components/splash.astro";
+import Hero from "~/components/hero.astro";
 import Testimonials from "~/components/testimonials.astro";
 import ContactUs from "~/components/contact-us.astro";
 import Demos from "../components/demos.astro";
 import Content from "~/components/content.astro";
+import Offering from "~/components/offering.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -80,16 +81,17 @@ const description =
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
     <Header />
-    <Splash />
-    <div class="space-y-24 px-8 py-32">
-      <Intro />
+    <Hero />
+    
+      <Offering/>
+      <Intro /> 
       <!-- <Content /> -->
       <!-- <Features /> -->
       <!-- <Testimonials /> -->
       <Demos />
       <!-- <Showcase /> -->
       <ContactUs />
-    </div>
+  
     <Footer />
   </body>
 </html>
