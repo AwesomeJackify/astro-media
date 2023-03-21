@@ -11,6 +11,7 @@ import ContactUs from "~/components/contact-us.astro";
 import Demos from "../components/demos.astro";
 import Content from "~/components/content.astro";
 import Offering from "~/components/offering.astro";
+import Info from "~/components/info.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
@@ -82,16 +83,17 @@ const description =
   >
     <Header />
     <Hero />
-    
-      <Offering/>
-      <Intro /> 
-      <!-- <Content /> -->
-      <!-- <Features /> -->
-      <!-- <Testimonials /> -->
-      <Demos />
-      <!-- <Showcase /> -->
-      <ContactUs />
-  
+
+    <Offering />
+    <Info />
+    <!-- <Intro />  -->
+    <!-- <Content /> -->
+    <!-- <Features /> -->
+    <!-- <Testimonials /> -->
+    <Demos />
+    <!-- <Showcase /> -->
+    <!-- <ContactUs /> -->
+
     <Footer />
   </body>
 </html>
