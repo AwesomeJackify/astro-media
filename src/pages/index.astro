@@ -15,7 +15,7 @@ const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
   "Astro Media is a forward-thinking and dynamic digital agency that places a premium on speed, enabling your business to achieve unparalleled growth potential.  Our digital agency is based in Auckland, New Zealand.  ";
-const keywords = 
+const keywords =
   "New Zealand, Auckland, Web Developer, Web Design, Hire, Cheap, Website, SEO, Digital Branding";
 ---
 
@@ -24,12 +24,22 @@ const keywords =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={generator} />
 
     <title>Astro Media</title>
@@ -37,7 +47,7 @@ const keywords =
     <meta name="keywords" content={keywords} />
 
     <!-- social media -->
-    <meta property="og:title" content="Astro Media" />
+    <meta property="og:title" content="Astro Media NZ" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -77,7 +87,7 @@ const keywords =
       <Intro />
       <Features />
       <!-- <Testimonials /> -->
-      <Demos/>
+      <Demos />
       <!-- <Showcase /> -->
       <ContactUs />
     </div>
