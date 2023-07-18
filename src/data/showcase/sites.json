@@ -1,17 +1,12 @@
 [
   {
+    "title": "Joy Creative",
+    "image": "./images/joy-creative.png",
+    "url": "https://main--chipper-tapioca-d72e04.netlify.app/"
+  },
+  {
     "title": "McIntosh Design & Build",
     "image": "./images/mcintosh-design-build.png",
     "url": "https://www.mcintoshbuild.com/"
-  },
-  {
-    "title": "Real Estate Portfolio",
-    "image": "./images/real-estate-portfolio-1.png",
-    "url": "https://snazzy-biscotti-4de7e3.netlify.app/"
-  },
-  {
-    "title": "Kebabs & Gyros",
-    "image": "./images/gyros-kebabs.png",
-    "url": "https://lovely-jalebi-ba408c.netlify.app/"
   }
 ]
