@@ -3,33 +3,65 @@ import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
+import jackOtis from "../assets/jackotis.jpg";
 ---
 
-<ContentSection title="Unleash growth" id="intro-section-1">
+<ContentSection title="What is Astro Media?" id="intro-section-1">
   <Icon slot="eyebrow" name="logomark" class="h-32" />
   <Fragment slot="lead">
-    Marketing and website design are essential components for achieving
-    <span class="text-primary">long term</span> business growth. However, most businsses
-    lack a digital footprint in the <span class="text-primary">modern</span> age.
-    If this sounds like <span class="text-primary">you</span>, potential revenue
-    may be untapped.
+    Astro Media was founded in early 2023, because we noticed the lack of
+    quality websites in New Zealand, we discovered that many small businesses
+    were still using old websites that were slow and often had confusing
+    layouts. <br />
+    <br />
+
+    This lead to Jack Gong, a Software Engineering student and Otis Wales, a
+    Computer Science student to come together in order to make changes in this
+    landscape.
+
+    <br />
+    <br />
+    Our primary mission is to deliver great websites, which result in <span
+      class="text-primary"
+      >high conversions.
+    </span>
   </Fragment>
-  <figure
-    class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
-  >
-    <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
-      <h3 class="font-semibold text-lg">
-        "No business, whether you’re part-time, self-employed, a start-up or you
-        have a large staff, can afford to be without a digital presence."
-      </h3>
-    </blockquote>
+</ContentSection>
+<div class="flex flex-col sm:mx-16 xl:mx-32">
+  <div class="flex flex-col items-center justify-center sm:flex-row">
     <Image
-      src={quoteLogo}
-      class="w-40 rounded-2xl bg-default p-3 px-4"
+      src={jackOtis}
+      class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
       alt="business.govt.nz logo"
     />
-  </figure>
-</ContentSection>
+    <Image
+      src={jackOtis}
+      class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
+      alt="business.govt.nz logo"
+    />
+  </div>
+  <p class="italic">
+    Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
+      href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
+    >
+  </p>
+</div>
+
+<figure
+  class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
+>
+  <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
+    <h3 class="font-semibold text-lg">
+      "No business, whether you’re part-time, self-employed, a start-up or you
+      have a large staff, can afford to be without a digital presence."
+    </h3>
+  </blockquote>
+  <Image
+    src={quoteLogo}
+    class="w-40 rounded-2xl bg-default p-3 px-4"
+    alt="business.govt.nz logo"
+  />
+</figure>
 
 <ContentSection title="How we will help" id="intro-section-2">
   <Fragment slot="lead">
