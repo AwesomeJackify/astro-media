@@ -1,12 +1,17 @@
 [
   {
+    "title": "Hidden Gems Lost Landscapes Art Trail",
+    "image": "./images/sites/art-trail.png",
+    "url": "https://art-trail.neighbourhoodarts.org.nz/"
+  },
+  {
     "title": "Joy Creative",
-    "image": "./images/joy-creative.png",
+    "image": "./images/sites/joy-creative.png",
     "url": "https://main--chipper-tapioca-d72e04.netlify.app/"
   },
   {
     "title": "McIntosh Design & Build",
-    "image": "./images/mcintosh-design-build.png",
+    "image": "./images/sites/mcintosh-design-build.png",
     "url": "https://www.mcintoshbuild.com/"
   }
 ]

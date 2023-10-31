@@ -3,10 +3,13 @@
 import type { ShowcaseSite } from "~/types";
 import sitesData from "./sites.json";
 
-const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg}", {
-  eager: true,
-  import: "default",
-});
+const allImages = import.meta.glob<ImageMetadata>(
+  "./images/sites/*.{png,jpg,jpeg}",
+  {
+    eager: true,
+    import: "default",
+  }
+);
 
 let _loadShowcase: Promise<Array<ShowcaseSite>>;
 
