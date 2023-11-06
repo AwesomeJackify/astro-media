@@ -26,7 +26,7 @@ const features: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="Features" id="features">
+<ContentSection title="" id="features">
   <Fragment slot="lead">
     <span class="text-primary">Upgrade</span> your business with our powerful features,
     <span class="text-primary">tailored</span> to enhance your operations and drive
@@ -37,12 +37,12 @@ const features: Array<FeatureItem> = [
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
-        <li class="border-default bg-offset flex flex-col items-center gap-4 border p-6">
-          <div class="border-primary text-primary h-16 w-16 rounded-full border-2 p-3">
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary">
             <Icon name={icon} />
           </div>
-          <p class="text-center text-xl font-extrabold">{title}</p>
-          <p class="text-offset text-center text-sm">{description}</p>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
         </li>
       ))
     }

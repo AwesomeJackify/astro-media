@@ -3,110 +3,113 @@ import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
-import jackOtis from "../assets/jackotis.jpg";
+import jack from "../assets/jack.jpeg";
+import otis from "../assets/otis.jpeg";
+import AstroLogo from "/AstroMediaLogo.svg";
 ---
 
-<ContentSection title="What is Astro Media?" id="intro-section-1">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
-  <Fragment slot="lead">
-    Astro Media was founded in early 2023, because we noticed the lack of
-    quality websites in New Zealand, we discovered that many small businesses
-    were still using old websites that were slow and often had confusing
-    layouts. <br />
-    <br />
+<div class="flex flex-col">
+  <img src={AstroLogo} alt="image description" class="my-8 h-16" />
+  <ContentSection title="What is Astro Media?" id="intro-section-1">
+    <Fragment slot="lead">
+      Astro Media was founded in early 2023, because we noticed the lack of
+      quality websites in New Zealand, we discovered that many small businesses
+      were still using old websites that were slow and often had confusing
+      layouts. <br />
+      <br />
+      This lead to Jack Gong, a Software Engineering student and Otis Wales, a Computer
+      Science student to come together in order to make changes in this landscape.
 
-    This lead to Jack Gong, a Software Engineering student and Otis Wales, a
-    Computer Science student to come together in order to make changes in this
-    landscape.
-
-    <br />
-    <br />
-    Our primary mission is to deliver great websites, which result in <span
-      class="text-primary"
-      >high conversions.
-    </span>
-  </Fragment>
-</ContentSection>
-<div class="flex flex-col sm:mx-16 xl:mx-32">
-  <div class="flex flex-col items-center justify-center sm:flex-row">
-    <Image
-      src={jackOtis}
-      class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
-      alt="business.govt.nz logo"
-    />
-    <Image
-      src={jackOtis}
-      class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
-      alt="business.govt.nz logo"
-    />
+      <br />
+      <br />
+      Our primary mission is to deliver great websites, which result in <span
+        class="text-primary"
+        >high conversions.
+      </span>
+    </Fragment>
+  </ContentSection>
+  <div class="flex flex-col sm:mx-16 xl:mx-32">
+    <div class="flex flex-col items-center justify-center sm:flex-row">
+      <Image
+        src={jack}
+        class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
+        alt="business.govt.nz logo"
+      />
+      <Image
+        src={otis}
+        class="rounded-2xl bg-default p-3 px-4 sm:w-1/2"
+        alt="business.govt.nz logo"
+      />
+    </div>
+    <p class="italic">
+      Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
+        href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
+      >
+    </p>
   </div>
-  <p class="italic">
-    Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
-      href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
-    >
-  </p>
-</div>
 
-<figure
-  class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
->
-  <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
-    <h3 class="font-semibold text-lg">
-      "No business, whether you’re part-time, self-employed, a start-up or you
-      have a large staff, can afford to be without a digital presence."
-    </h3>
-  </blockquote>
-  <a
-    href="https://www.business.govt.nz/getting-started/building-a-brand/getting-an-online-presence/"
+  <figure
+    class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
   >
-    <Image
-      src={quoteLogo}
-      class="w-40 rounded-2xl bg-default p-3 px-4"
-      alt="business.govt.nz logo"
-    />
-  </a>
-</figure>
-
-<ContentSection title="How we will help" id="intro-section-2">
-  <Fragment slot="lead">
-    We believe that a website is more than just a digital presence; it's a
-    powerful tool that can propel your business to new heights. Our commitment
-    goes beyond mere design; we're dedicated to your online success.
-  </Fragment>
-
-  <Fragment slot="lead">
-    <br /><br />
-    Bespoke Solutions: <span class="font-normal">
-      Every business is unique, and so should its online representation. We
-      craft high-quality, tailor-made websites designed to fit your business's
-      distinct needs and aspirations.</span
+    <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
+      <h3 class="font-semibold text-lg">
+        "No business, whether you’re part-time, self-employed, a start-up or you
+        have a large staff, can afford to be without a digital presence."
+      </h3>
+    </blockquote>
+    <a
+      href="https://www.business.govt.nz/getting-started/building-a-brand/getting-an-online-presence/"
     >
-  </Fragment>
+      <Image
+        src={quoteLogo}
+        class="w-40 rounded-2xl bg-default p-3 px-4"
+        alt="business.govt.nz logo"
+      />
+    </a>
+  </figure>
 
-  <Fragment slot="lead">
-    <br /><br />
-    Seamless Hosting: <span class="font-normal">
-      With our robust hosting solutions, you won't have to fret over the
-      technicalities. We ensure your website remains swift, secure, and
-      accessible, offering an uninterrupted experience for your visitors.</span
-    >
-  </Fragment>
+  <ContentSection title="How we will help" id="intro-section-2">
+    <Fragment slot="lead">
+      We believe that a website is more than just a digital presence; it's a
+      powerful tool that can propel your business to new heights. Our commitment
+      goes beyond mere design; we're dedicated to your online success.
+    </Fragment>
 
-  <Fragment slot="lead">
-    <br /><br />
-    Partners in Success: <span class="font-normal">
-      We're not just here to design and deploy; we're here to support. Our team
-      continuously monitors, optimises, and refines your online presence to
-      guarantee that your business doesn't merely exist online, but flourishes.</span
-    >
-  </Fragment>
+    <Fragment slot="lead">
+      <br /><br />
+      Unique Solutions: <span class="font-normal">
+        Every business is unique, and so should its online representation. We
+        craft high-quality, tailor-made websites designed to fit your business's
+        distinct needs and aspirations.</span
+      >
+    </Fragment>
 
-  <Fragment slot="lead">
-    <br /><br />
-    Committed to Your Growth: <span class="font-normal">
-      Our goal is to ensure your business's online success. We provide ongoing
-      guidance, tools, and insights to help you navigate the digital landscape
-      effectively, turning visitors into loyal customers.</span
-    >
-  </Fragment>
-</ContentSection>
+    <Fragment slot="lead">
+      <br /><br />
+      Seamless Hosting: <span class="font-normal">
+        With our robust hosting solutions, you won't have to fret over the
+        technicalities. We ensure your website remains swift, secure, and
+        accessible, offering an uninterrupted experience for your visitors.</span
+      >
+    </Fragment>
+
+    <Fragment slot="lead">
+      <br /><br />
+      Partners in Success: <span class="font-normal">
+        We're not just here to design and deploy; we're here to support. Our
+        team continuously monitors, optimises, and refines your online presence
+        to guarantee that your business doesn't merely exist online, but
+        flourishes.</span
+      >
+    </Fragment>
+
+    <Fragment slot="lead">
+      <br /><br />
+      Committed to Your Growth: <span class="font-normal">
+        Our goal is to ensure your business's online success. We provide ongoing
+        guidance, tools, and insights to help you navigate the digital landscape
+        effectively, turning visitors into loyal customers.</span
+      >
+    </Fragment>
+  </ContentSection>
+</div>
