@@ -1,24 +1,24 @@
 ---
 import { Icon } from "astro-icon";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
 import jack from "../assets/jack.png";
 import otis from "../assets/otis.jpeg";
-import AstroLogo from "/AstroMediaLogo.svg";
+import astroLogo from "~/assets/AstroMediaLogo.svg";
 ---
 
 <div class="flex flex-col sm:mx-32">
-  <img src={AstroLogo} alt="image description" class="my-8 h-16" />
+  <img src={astroLogo.src} alt="image description" class="my-8 h-16" />
   <ContentSection title="What is Astro Media?" id="intro-section-1">
     <Fragment slot="lead">
-      Astro Media was founded in early 2023, because we noticed the lack of
+      Astro Media was founded in early 2023 because we noticed the lack of
       quality websites in New Zealand, we discovered that many small businesses
       were still using old websites that were slow and often had confusing
       layouts. <br />
       <br />
-      This lead to Jack Gong, a Software Engineering student and Otis Wales, a Computer
-      Science student to come together in order to make changes in this landscape.
+      This led to Jack Gong, a Software Engineering student and Otis Wales, a Computer
+      Science student to come together to make changes in this landscape.
 
       <br />
       <br />
@@ -75,7 +75,7 @@ import AstroLogo from "/AstroMediaLogo.svg";
     </h2>
     <div class="mt-16 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
       <div
-        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
         style="min-height: 300px;"
       >
         <div
@@ -83,14 +83,16 @@ import AstroLogo from "/AstroMediaLogo.svg";
         >
           <Icon name="mdi:code-braces-box" />
         </div>
-        <h1 class="mb-4 font-extrabold text-2xl">Custom Websites</h1>
+        <h1 class="mb-4 text-center font-extrabold text-2xl">
+          Custom Websites
+        </h1>
         <p>
           We develop custom websites which are optimised for speed and ranking,
           we can guarantee fast loading times and high SEO scores.
         </p>
       </div>
       <div
-        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
         style="min-height: 300px;"
       >
         <div
@@ -98,7 +100,7 @@ import AstroLogo from "/AstroMediaLogo.svg";
         >
           <Icon name="mdi:search-web" />
         </div>
-        <h1 class="mb-4 font-extrabold text-2xl">
+        <h1 class="mb-4 text-center font-extrabold text-2xl">
           Auditing of your social media presence
         </h1>
         <p>
@@ -109,7 +111,7 @@ import AstroLogo from "/AstroMediaLogo.svg";
         </p>
       </div>
       <div
-        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
         style="min-height: 300px;"
       >
         <div
@@ -117,7 +119,9 @@ import AstroLogo from "/AstroMediaLogo.svg";
         >
           <Icon name="mdi:account" />
         </div>
-        <h1 class="mb-4 font-extrabold text-2xl">Constant support</h1>
+        <h1 class="mb-4 text-center font-extrabold text-2xl">
+          Constant support
+        </h1>
         <p>
           Got a problem with your website? We will be there to help you out.
         </p>
@@ -126,15 +130,19 @@ import AstroLogo from "/AstroMediaLogo.svg";
     <div
       class="mt-16 flex flex-col items-center justify-center sm:mx-32 md:mx-64"
     >
-      <h1 class="font-extrabold text-2xl">Why we are different</h1>
-      <p class="mt-8">
+      <h1
+        class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+      >
+        Why we are different
+      </h1>
+      <p class="mt-8 text-center">
         We are more than just web developers, we are passionate about helping
-        businesses grow. We also are able to develop custom coded solutions to
-        your problems, we are not limited by the constraints of a CMS and can
-        develop anything you need. Whether thats a mobile app, a custom web app
-        or a website.
+        businesses grow. We also can develop custom-coded solutions to your
+        problems, we are not limited by the constraints of a CMS and can develop
+        anything you need. Whether thats a mobile app, a custom web app or a
+        website.
       </p>
-      <h1 class="mt-8 font-extrabold text-2xl">
+      <!-- <h1 class="mt-8 font-extrabold text-2xl">
         Interested in getting started with us?
       </h1>
       <a
@@ -143,7 +151,7 @@ import AstroLogo from "/AstroMediaLogo.svg";
         role="button"
       >
         Email now
-      </a>
+      </a> -->
     </div>
   </div>
 </div>
