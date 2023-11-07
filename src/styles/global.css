@@ -10,6 +10,11 @@ a,
   @apply bg-gradient-to-br from-orange-500  to-yellow-500;
 }
 
+.gradient-text-subtitle-1 {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-br from-orange-100 to-orange-500;
+}
+
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

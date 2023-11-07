@@ -1,21 +1,55 @@
 ---
 import { Icon } from "astro-icon";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
+import jack from "../assets/jack.png";
+import otis from "../assets/otis.jpeg";
+import astroLogo from "../assets/AstroMediaLogo.svg";
 ---
 
-<ContentSection title="Unleash growth" id="intro-section-1">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
-  <Fragment slot="lead">
-    Marketing and website design are essential components for achieving
-    <span class="text-primary">long term</span> business growth. However, most businsses
-    lack a digital footprint in the <span class="text-primary">modern</span> age.
-    If this sounds like <span class="text-primary">you</span>, potential revenue
-    may be untapped.
-  </Fragment>
+<div class="flex flex-col sm:mx-32">
+  <Image src={astroLogo} alt="image description" class="my-8 h-16 mx-auto" />
+  <ContentSection title="What is Astro Media?" id="intro-section-1">
+    <Fragment slot="lead">
+      Astro Media was founded in early 2023 because we noticed the lack of
+      quality websites in New Zealand, we discovered that many small businesses
+      were still using old websites that were slow and often had confusing
+      layouts. <br />
+      <br />
+      This led to Jack Gong, a Software Engineering student and Otis Wales, a Computer
+      Science student to come together to make changes in this landscape.
+
+      <br />
+      <br />
+      Our primary mission is to deliver great websites, which result in <span
+        class="text-primary"
+        >high conversions.
+      </span>
+    </Fragment>
+  </ContentSection>
+  <div class="mt-32 flex flex-col sm:mx-16 xl:mx-32">
+    <div class="flex flex-col items-center justify-center gap-y-4 sm:flex-row">
+      <Image
+        src={jack}
+        class="rounded-2xl bg-default sm:w-1/3"
+        alt="business.govt.nz logo"
+      />
+      <Image
+        src={otis}
+        class="rounded-2xl bg-default sm:w-1/2"
+        alt="business.govt.nz logo"
+      />
+    </div>
+    <p class="italic">
+      Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
+        href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
+      >
+    </p>
+  </div>
+
   <figure
-    class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
+    class="mt-16 flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
   >
     <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
       <h3 class="font-semibold text-lg">
@@ -23,20 +57,100 @@ import quoteLogo from "../assets/business-govt-nz.png";
         have a large staff, can afford to be without a digital presence."
       </h3>
     </blockquote>
-    <Image
-      src={quoteLogo}
-      class="w-40 rounded-2xl bg-default p-3 px-4"
-      alt="business.govt.nz logo"
-    />
+    <a
+      href="https://www.business.govt.nz/getting-started/building-a-brand/getting-an-online-presence/"
+    >
+      <Image
+        src={quoteLogo}
+        class="w-40 rounded-2xl bg-default p-3 px-4"
+        alt="business.govt.nz logo"
+      />
+    </a>
   </figure>
-</ContentSection>
-
-<ContentSection title="How we will help" id="intro-section-2">
-  <Fragment slot="lead">
-    Customers are <span class="text-primary">less likely</span> to interact with
-    businesses that do not have a professional online image. Our goal is to assist
-    our clients with identifying and addressing areas of
-    <span class="text-primary">weakness</span>
-    in their digital strategy.
-  </Fragment>
-</ContentSection>
+  <ContentSection title="" id="features">
+    <div class="mt-16 flex flex-col items-center justify-center">
+      <h2
+        class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+      >
+        How we will help you grow
+      </h2>
+      <p class="mt-8 max-w-4xl text-center">
+        We're not just web developers; we're a team dedicated to boosting your
+        business. Our custom-coded solutions are crafted to tackle your unique
+        challenges head-on, without being boxed in by CMS limitations. Need a
+        mobile app, a bespoke web application, or a slick new website? We've got
+        you covered.
+      </p>
+      <div class="mt-16 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+        <div
+          class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
+          style="min-height: 300px;"
+        >
+          <div
+            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+          >
+            <Icon name="mdi:code-braces-box" />
+          </div>
+          <h1 class="mb-4 text-center font-extrabold text-2xl">
+            Custom Websites
+          </h1>
+          <p class="text-center">
+            We craft tailor-made websites that are not only lightning-fast but
+            also climb the ranks in SEO. Expect swift loading times and
+            top-notch SEO performance, guaranteed.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
+          style="min-height: 300px;"
+        >
+          <div
+            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+          >
+            <Icon name="mdi:search-web" />
+          </div>
+          <h1 class="mb-4 text-center font-extrabold text-2xl">
+            Social media presence
+          </h1>
+          <p class="text-center">
+            We know the power of social media in connecting with your audience.
+            Without it, you could be missing a big chance to engage. Let us take
+            a close look at your social media activity, and we'll give you a
+            clear report on ways to boost your presence.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center justify-start gap-5 border-default bg-offset p-8"
+          style="min-height: 300px;"
+        >
+          <div
+            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+          >
+            <Icon name="mdi:account" />
+          </div>
+          <h1 class="mb-4 text-center font-extrabold text-2xl">
+            Constant support
+          </h1>
+          <p class="text-center">
+            If you're hitting a snag with your website, don't worry—we're here
+            to help you sort it out.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-16 flex flex-col items-center justify-center sm:mx-32 md:mx-64"
+    >
+      <!-- <h1 class="mt-8 font-extrabold text-2xl">
+        Interested in getting started with us?
+      </h1>
+      <a
+        href="mailto:therunningbeta@gmail.com"
+        class="mt-8 w-full rounded-md border border-black p-8 text-center font-bold text-primary transition duration-300 ease-in-out text-2xl hover:bg-black hover:text-white"
+        role="button"
+      >
+        Email now
+      </a> -->
+    </div>
+  </ContentSection>
+</div>

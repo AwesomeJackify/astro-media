@@ -9,10 +9,11 @@ import Splash from "~/components/splash.astro";
 import Testimonials from "~/components/testimonials.astro";
 import ContactUs from "~/components/contact-us.astro";
 import Demos from "../components/demos.astro";
+import Content from "~/components/content.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const image = new URL("social.png", site);
 const description =
   "Astro Media is a forward-thinking and dynamic digital agency that places a premium on speed, enabling your business to achieve unparalleled growth potential.  Our digital agency is based in Auckland, New Zealand.  ";
 const keywords =
@@ -85,7 +86,6 @@ const keywords =
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <Intro />
-      <Features />
       <!-- <Testimonials /> -->
       <Demos />
       <!-- <Showcase /> -->

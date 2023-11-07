@@ -1,7 +1,9 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import astroLogo from "../assets/AstroMediaLogo.svg";
 
 const navItems: Array<NavItem> = [
   { title: "Features", url: "#features" },
@@ -16,7 +18,7 @@ const navItems: Array<NavItem> = [
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Astro Media</h1>
-    <Icon name="logomark" class="h-10" />
+    <Image src={astroLogo} alt="image description" class="h-8 w-fit" />
     <!-- <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
   <div>
@@ -129,7 +131,7 @@ const navItems: Array<NavItem> = [
 
 <style>
   .fixed-header {
-    @apply fixed top-0 bottom-auto;
+    @apply fixed bottom-auto top-0;
     @apply border-default bg-default text-default;
   }
   .modal.is-open {

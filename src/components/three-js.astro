@@ -1,0 +1,49 @@
+<div id="three-js-container"></div>
+<script type="module">
+  import * as THREE from "https://unpkg.com/three/build/three.module.js";
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    100,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document
+    .getElementById("three-js-container")
+    .appendChild(renderer.domElement);
+
+  // Replace BoxGeometry with SphereGeometry
+  const geometry = new THREE.SphereGeometry(4, 32, 32);
+
+  // Load Earth texture
+  const textureLoader = new THREE.TextureLoader();
+  const earthTexture = textureLoader.load("/public/jupiter.jpg");
+
+  // Replace MeshBasicMaterial with MeshStandardMaterial
+  const material = new THREE.MeshStandardMaterial({ map: earthTexture });
+
+  const earth = new THREE.Mesh(geometry, material);
+  scene.add(earth);
+
+  // Add a light source to the scene
+  const light = new THREE.PointLight(0xffffff, 1, 100);
+  light.position.set(10, 10, 10);
+  scene.add(light);
+
+  camera.position.z = 12;
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    // Rotate the Earth
+    earth.rotation.y += 0.005;
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+</script>
