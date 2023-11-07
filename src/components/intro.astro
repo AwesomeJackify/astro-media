@@ -5,11 +5,11 @@ import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
 import jack from "../assets/jack.png";
 import otis from "../assets/otis.jpeg";
-import astroLogo from "~/assets/AstroMediaLogo.svg";
+import astroLogo from "../assets/AstroMediaLogo.svg";
 ---
 
 <div class="flex flex-col sm:mx-32">
-  <img src={astroLogo.src} alt="image description" class="my-8 h-16" />
+  <Image src={astroLogo} alt="image description" class="my-8 h-16 mx-auto" />
   <ContentSection title="What is Astro Media?" id="intro-section-1">
     <Fragment slot="lead">
       Astro Media was founded in early 2023 because we noticed the lack of
