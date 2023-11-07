@@ -1,32 +1,17 @@
 [
   {
-    "title": "Real Estate Portfolio #1",
-    "image": "./images/real-estate-portfolio-1.png",
-    "url": "https://snazzy-biscotti-4de7e3.netlify.app/"
+    "title": "Hidden Gems Lost Landscapes Art Trail",
+    "image": "./images/sites/art-trail.png",
+    "url": "https://art-trail.neighbourhoodarts.org.nz/"
   },
   {
-    "title": "Real Estate Portfolio #2",
-    "image": "./images/real-estate-portfolio-2.png",
-    "url": "https://zesty-tiramisu-6adc4b.netlify.app/"
+    "title": "Joy Creative",
+    "image": "./images/sites/joy-creative.png",
+    "url": "https://main--chipper-tapioca-d72e04.netlify.app/"
   },
   {
-    "title": "Gyros Kebabs",
-    "image": "./images/gyros-kebabs.png",
-    "url": "https://lovely-jalebi-ba408c.netlify.app/"
-  },
-  {
-    "title": "Pro-File",
-    "image": "./images/pro-file.png",
-    "url": "https://pro-file.littlesticks.site/"
-  },
-  {
-    "title": "Uzair Ahmed",
-    "image": "./images/uzair.png",
-    "url": "https://astro-portfolio-uzair.vercel.app/"
-  },
-  {
-    "title": "Ema Suriano",
-    "image": "./images/emasuriano.png",
-    "url": "https://art.emasuriano.com/"
+    "title": "McIntosh Design & Build",
+    "image": "./images/sites/mcintosh-design-build.png",
+    "url": "https://www.mcintoshbuild.com/"
   }
 ]
