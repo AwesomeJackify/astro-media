@@ -3,19 +3,53 @@ import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
+import jack from "../assets/jack.png";
+import otis from "../assets/otis.jpeg";
+import AstroLogo from "/AstroMediaLogo.svg";
 ---
 
-<ContentSection title="Unleash growth" id="intro-section-1">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
-  <Fragment slot="lead">
-    Marketing and website design are essential components for achieving
-    <span class="text-primary">long term</span> business growth. However, most businsses
-    lack a digital footprint in the <span class="text-primary">modern</span> age.
-    If this sounds like <span class="text-primary">you</span>, potential revenue
-    may be untapped.
-  </Fragment>
+<div class="flex flex-col sm:mx-32">
+  <img src={AstroLogo} alt="image description" class="my-8 h-16" />
+  <ContentSection title="What is Astro Media?" id="intro-section-1">
+    <Fragment slot="lead">
+      Astro Media was founded in early 2023, because we noticed the lack of
+      quality websites in New Zealand, we discovered that many small businesses
+      were still using old websites that were slow and often had confusing
+      layouts. <br />
+      <br />
+      This lead to Jack Gong, a Software Engineering student and Otis Wales, a Computer
+      Science student to come together in order to make changes in this landscape.
+
+      <br />
+      <br />
+      Our primary mission is to deliver great websites, which result in <span
+        class="text-primary"
+        >high conversions.
+      </span>
+    </Fragment>
+  </ContentSection>
+  <div class="mt-32 flex flex-col sm:mx-16 xl:mx-32">
+    <div class="flex flex-col items-center justify-center gap-y-4 sm:flex-row">
+      <Image
+        src={jack}
+        class="rounded-2xl bg-default sm:w-1/3"
+        alt="business.govt.nz logo"
+      />
+      <Image
+        src={otis}
+        class="rounded-2xl bg-default sm:w-1/2"
+        alt="business.govt.nz logo"
+      />
+    </div>
+    <p class="italic">
+      Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
+        href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
+      >
+    </p>
+  </div>
+
   <figure
-    class="flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
+    class="mt-16 flex flex-col items-center justify-center rounded-xl bg-flip p-8 text-center"
   >
     <blockquote class="mx-auto mb-4 max-w-2xl text-flip lg:mb-8">
       <h3 class="font-semibold text-lg">
@@ -23,20 +57,93 @@ import quoteLogo from "../assets/business-govt-nz.png";
         have a large staff, can afford to be without a digital presence."
       </h3>
     </blockquote>
-    <Image
-      src={quoteLogo}
-      class="w-40 rounded-2xl bg-default p-3 px-4"
-      alt="business.govt.nz logo"
-    />
+    <a
+      href="https://www.business.govt.nz/getting-started/building-a-brand/getting-an-online-presence/"
+    >
+      <Image
+        src={quoteLogo}
+        class="w-40 rounded-2xl bg-default p-3 px-4"
+        alt="business.govt.nz logo"
+      />
+    </a>
   </figure>
-</ContentSection>
-
-<ContentSection title="How we will help" id="intro-section-2">
-  <Fragment slot="lead">
-    Customers are <span class="text-primary">less likely</span> to interact with
-    businesses that do not have a professional online image. Our goal is to assist
-    our clients with identifying and addressing areas of
-    <span class="text-primary">weakness</span>
-    in their digital strategy.
-  </Fragment>
-</ContentSection>
+  <div class="mt-16 flex flex-col items-center justify-center">
+    <h2
+      class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+    >
+      How we will help you grow
+    </h2>
+    <div class="mt-16 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+      <div
+        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        style="min-height: 300px;"
+      >
+        <div
+          class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+        >
+          <Icon name="mdi:code-braces-box" />
+        </div>
+        <h1 class="mb-4 font-extrabold text-2xl">Custom Websites</h1>
+        <p>
+          We develop custom websites which are optimised for speed and ranking,
+          we can guarantee fast loading times and high SEO scores.
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        style="min-height: 300px;"
+      >
+        <div
+          class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+        >
+          <Icon name="mdi:search-web" />
+        </div>
+        <h1 class="mb-4 font-extrabold text-2xl">
+          Auditing of your social media presence
+        </h1>
+        <p>
+          We understand that social media is a great way to reach your audience,
+          without it you are missing out on a huge opportunity. We will audit
+          your social media presence and provide you with a report on how you
+          can improve.
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center justify-start border-default bg-offset p-8"
+        style="min-height: 300px;"
+      >
+        <div
+          class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+        >
+          <Icon name="mdi:account" />
+        </div>
+        <h1 class="mb-4 font-extrabold text-2xl">Constant support</h1>
+        <p>
+          Got a problem with your website? We will be there to help you out.
+        </p>
+      </div>
+    </div>
+    <div
+      class="mt-16 flex flex-col items-center justify-center sm:mx-32 md:mx-64"
+    >
+      <h1 class="font-extrabold text-2xl">Why we are different</h1>
+      <p class="mt-8">
+        We are more than just web developers, we are passionate about helping
+        businesses grow. We also are able to develop custom coded solutions to
+        your problems, we are not limited by the constraints of a CMS and can
+        develop anything you need. Whether thats a mobile app, a custom web app
+        or a website.
+      </p>
+      <h1 class="mt-8 font-extrabold text-2xl">
+        Interested in getting started with us?
+      </h1>
+      <a
+        href="mailto:therunningbeta@gmail.com"
+        class="mt-8 w-full rounded-md border border-black p-8 text-center font-bold text-primary transition duration-300 ease-in-out text-2xl hover:bg-black hover:text-white"
+        role="button"
+      >
+        Email now
+      </a>
+    </div>
+  </div>
+</div>
