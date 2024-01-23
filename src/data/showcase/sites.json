@@ -1,13 +1,18 @@
 [
   {
+    "title": "Ata Ahi Fitness",
+    "image": "./images/sites/ataahi-fitness.png",
+    "url": "http://www.ataahifitness.co.nz/"
+  },
+  {
+    "title": "The PotCast",
+    "image": "./images/sites/the-potcast.png",
+    "url": "https://www.heavydayze.com/"
+  },
+  {
     "title": "Hidden Gems Lost Landscapes Art Trail",
     "image": "./images/sites/art-trail.png",
     "url": "https://art-trail.neighbourhoodarts.org.nz/"
-  },
-  {
-    "title": "Joy Creative",
-    "image": "./images/sites/joy-creative.png",
-    "url": "https://main--chipper-tapioca-d72e04.netlify.app/"
   },
   {
     "title": "McIntosh Design & Build",
