@@ -1,5 +1,6 @@
 ---
 import ThreeJs from "./three-js.astro";
+
 ---
 
 <section class="relative h-full bg-black">
@@ -8,11 +9,31 @@ import ThreeJs from "./three-js.astro";
       class="gradient-text mx-8 font-extrabold tracking-tighter text-8xl sm:mx-0"
     >
       We transform
-      <br /> your online presence
+      <br /> your 
+      <span class="online-tag ">online
+        </span> presence
     </h2>
-    <h3 class="gradient-text mx-8 mt-4 tracking-tighter text-white text-xl">
-      By building awesome websites that convert.
+    <h3 class="website-tag gradient-text mx-8 mt-4 tracking-tighter text-white text-xl">
+      By building awesome websites that customers trust.
     </h3>
   
   </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.to(".online-tag", {
+    duration: 0.5,
+    textShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
+    repeat: 0,
+    color : "white"
+  });
+
+  gsap.to(".website-tag", {
+    duration: 0.5,
+    textShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
+    repeat: 0,
+    color : "white"
+  });
+</script>
