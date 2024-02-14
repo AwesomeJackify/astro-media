@@ -17,3 +17,33 @@ import ThreeJs from "./three-js.astro";
     </h3>
   </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".online-tag", {
+    //Makes the word "Online" go white
+    duration: 0.5,
+    textShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
+    color: "white",
+  });
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 0.6,
+    text: {
+      value: "By building awesome websites that customers trust.",
+      ease: "none",
+      delimiter: "",
+    },
+  });
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 1,
+    delay: 1,
+    color: "white",
+  });
+</script>
