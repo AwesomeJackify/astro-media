@@ -10,6 +10,11 @@
     "url": "https://www.heavydayze.com/"
   },
   {
+    "title": "Forever Clean",
+    "image": "./images/sites/forever-clean.png",
+    "url": "https://forevercleanpropertywash.co.nz/"
+  },
+  {
     "title": "Hidden Gems Lost Landscapes Art Trail",
     "image": "./images/sites/art-trail.png",
     "url": "https://art-trail.neighbourhoodarts.org.nz/"
@@ -18,10 +23,5 @@
     "title": "McIntosh Design & Build",
     "image": "./images/sites/mcintosh-design-build.png",
     "url": "https://www.mcintoshbuild.com/"
-  },
-  {
-    "title": "Forever Clean",
-    "image": "./images/sites/forever-clean.png",
-    "url": "https://forevercleanpropertywash.co.nz/"
   }
 ]
