@@ -5,6 +5,11 @@
     "url": "http://www.ataahifitness.co.nz/"
   },
   {
+    "title": "Savante Design",
+    "image": "./images/sites/savante-design.png",
+    "url": "https://savantedesign.co.nz/"
+  },
+  {
     "title": "Ethnic Women",
     "image": "./images/sites/ethnic.png",
     "url": "https://nzethnicwomen.org/"
@@ -23,10 +28,5 @@
     "title": "Hidden Gems Lost Landscapes Art Trail",
     "image": "./images/sites/art-trail.png",
     "url": "https://art-trail.neighbourhoodarts.org.nz/"
-  },
-  {
-    "title": "McIntosh Design & Build",
-    "image": "./images/sites/mcintosh-design-build.png",
-    "url": "https://www.mcintoshbuild.com/"
   }
 ]
