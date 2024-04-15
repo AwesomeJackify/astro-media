@@ -29,20 +29,22 @@ import astroLogo from "../assets/AstroMediaLogo.svg";
     </Fragment>
   </ContentSection>
   <div class="mt-32 flex flex-col items-center sm:mx-16 xl:mx-32">
-    <div class="flex flex-col items-center gap-x-8 justify-center gap-y-4 sm:flex-row">
-      <Image
-        src={otis}
-        class="rounded-2xl bg-default  sm:w-4/6 "
-        alt="Picture of co-founder Otis Wales"
-      />
+    <div
+      class="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-4 max-md:grid-cols-1"
+    >
       <Image
         src={jack}
-        class="rounded-2xl bg-default  sm:w-5/6"
+        class="rounded-2xl bg-default w-full h-full object-cover"
         alt=" Picture of co-founder Jack Gong"
       />
+      <Image
+        src={otis}
+        class="rounded-2xl bg-default w-full h-full object-cover"
+        alt="Picture of co-founder Otis Wales"
+      />
     </div>
-    <p class="italic mt-8">
-   Founders  <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
+    <p class="mt-8 italic">
+      Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
         href="https://www.linkedin.com/in/otiswales/">Otis Wales</a
       >
     </p>
