@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.14",
+    "caniuse-lite": "^1.0.30001616",
     "gsap": "^3.12.5",
     "micromodal": "^0.4.10",
     "sharp": "^0.33.2",
