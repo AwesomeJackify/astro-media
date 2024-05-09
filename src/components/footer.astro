@@ -9,6 +9,11 @@ const links: Array<FooterLink> = [
     description: "Astro on Neighbourly",
     icon: "clarity:house-solid",
   },
+  {
+    url: "https://www.instagram.com/astromedianz",
+    description: "Astro on Instagram",
+    icon: "mdi:instagram",
+  },
 ];
 ---
 
@@ -16,19 +21,24 @@ const links: Array<FooterLink> = [
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
-  <ul class="relative grid gap-4 sm:grid-cols-1">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current bg-[url('/src/assets/neighbourly.png')] bg-cover p-4"
-            href={link.url}
-            target="_blank"
-          >
-            <span class="sr-only">{link.description}</span>
-          </a>
-        </li>
-      ))
-    }
+  <ul class="relative flex justify-center gap-4">
+    <li>
+      <a
+        class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current bg-[url('/src/assets/neighbourly.png')] bg-cover p-4"
+        href="https://www.neighbourly.co.nz/business/astro-media"
+        target="_blank"
+      >
+        <span class="sr-only">Astro on Neighbourly</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current bg-[url('/src/assets/instagram.png')] bg-cover p-4"
+        href="https://www.neighbourly.co.nz/business/astro-media"
+        target="_blank"
+      >
+        <span class="sr-only">Astro on Instagram</span>
+      </a>
+    </li>
   </ul>
 </footer>
