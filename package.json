@@ -24,6 +24,7 @@
     "tailwindcss-fluid-type": "^2.0.3"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.5",
     "@fontsource/inter": "^4.5.14",
     "caniuse-lite": "^1.0.30001616",
     "gsap": "^3.12.5",

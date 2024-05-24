@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://astromedia.dev/sitemap-index.xml
