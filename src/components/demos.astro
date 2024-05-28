@@ -11,9 +11,12 @@ const sites = await getShowcase();
     <span class="text-primary">Explore</span> what's possible and get{" "}
     <span class="text-primary">inspired</span>.
   </Fragment>
-  <div class="max-w-6xl space-y-2">
+  <div class="flex max-w-6xl flex-col gap-4 space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {sites.map((site) => <ShowcaseCard site={site} />)}
+      {sites.slice(0, 3).map((site) => <ShowcaseCard site={site} />)}
     </div>
+    <a href="/portfolio" class="link mx-auto underline text-2xl"
+      >See More Of Our Work</a
+    >
   </div>
 </ContentSection>

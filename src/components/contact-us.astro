@@ -2,92 +2,10 @@
 import ContentSection from "./content-section.astro";
 ---
 
-<ContentSection title="Contact Us" id="contact-us">
-  <Fragment slot="lead">
-    <form data-netlify="true" name="Astro Media Contact">
-      <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="group relative z-0 mb-6 w-full">
-          <input
-            type="text"
-            name="floating_first_name"
-            id="floating_first_name"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
-            placeholder=" "
-            required
-          />
-          <label
-            for="floating_first_name"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-gray-500 duration-300 text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500"
-            >First name</label
-          >
-        </div>
-        <div class="group relative z-0 mb-6 w-full">
-          <input
-            type="text"
-            name="floating_last_name"
-            id="floating_last_name"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
-            placeholder=" "
-            required
-          />
-          <label
-            for="floating_last_name"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-gray-500 duration-300 text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500"
-            >Last name</label
-          >
-        </div>
-      </div>
-      <div class="group relative z-0 mb-6 w-full">
-        <input
-          type="email"
-          name="floating_email"
-          id="floating_email"
-          class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
-          placeholder=" "
-          required
-        />
-        <label
-          for="floating_email"
-          class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-gray-500 duration-300 text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500"
-          >Email address</label
-        >
-      </div>
-      <div>
-        <div class="group relative z-0 mb-6 w-full">
-          <input
-            type="tel"
-            name="floating_phone"
-            id="floating_phone"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent fill-white py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
-            placeholder=" "
-            required
-          />
-          <label
-            for="floating_phone"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-gray-500 duration-300 text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500"
-            >Phone number</label
-          >
-        </div>
-        <div class="group relative z-0 mb-6 w-full">
-          <textarea
-            id="message"
-            name="message"
-            rows="2"
-            class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
-            placeholder=" "
-            required></textarea>
-          <label
-            for="message"
-            class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-gray-500 duration-300 text-sm peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600 dark:text-gray-400 peer-focus:dark:text-blue-500"
-            >Message</label
-          >
-        </div>
-      </div>
-      <button
-        type="submit"
-        class="w-full rounded-lg bg-flip px-5 py-2.5 text-center font-medium text-flip transition text-sm hover:bg-primary focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
-        >Submit</button
-      >
-    </form>
-  </Fragment>
-</ContentSection>
+<section class="flex flex-col">
+  <a
+    href="/contact-us"
+    class="mx-auto w-fit bg-primary p-4 text-center font-bold text-4xl hover:bg-slate-700 hover:text-primary"
+    >Contact Us Today</a
+  >
+</section>

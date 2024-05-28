@@ -1,5 +1,10 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+
+import ShowcaseCard from "~/components/showcase-card.astro";
+import { getShowcase } from "~/data/showcase";
+
+const sites = await getShowcase();
 ---
 
 <Layout
@@ -15,9 +20,14 @@ import Layout from "~/layouts/Layout.astro";
       Our Portfolio
     </h1>
     <h2
-      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white"
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
     >
     </h2>
+  </section>
+  <section class="mx-auto my-16 max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {sites.map((site) => <ShowcaseCard site={site} />)}
+    </div>
   </section>
 </Layout>
 
@@ -31,7 +41,7 @@ import Layout from "~/layouts/Layout.astro";
     duration: 1,
     text: {
       value:
-        "Explore our portfolio showcasing top-notch website design and developmentby the best website developers near you. Check out our work and see how we can help you stand out online.",
+        "Explore our portfolio showcasing top-notch website design to spark your own creativity. Check out our work to see how we can help you stand out in your neighbourhood.",
       delimiter: " ",
     },
   });
