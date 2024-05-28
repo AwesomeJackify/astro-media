@@ -1,3 +1,47 @@
 {
-  "businessName": "Astro Media NZ"
+  "businessName": "Astro Media NZ",
+  "testimonials": [
+    {
+      "name": "Sam Singh",
+      "project": "Victorian Spas",
+      "testimonial": "I had a fantastic experience working with Jack and Otis for my website design needs. Their ability to make adjustments quickly and effectively was truly impressive. Whenever I had a request for design changes, they were on top of it, delivering results in record time. The level of responsiveness and attention to detail they demonstrated throughout the process was outstanding. I highly recommend Astro Media to anyone in need of professional and efficient website design services.",
+      "projectUrl": "/portfolio/victorian-spas",
+      "headshot": "victorian-spas.jpeg"
+    },
+    {
+      "name": "Penny Morton",
+      "project": "Savante Design",
+      "testimonial": "Jack is a great person to deal with. Very patient and open to changing things around in order to get the desired outcome for his clients. Any comms I sent through were responded to and dealt with very quickly. I thoroughly recommend him as a highly professional and talented young web designer.",
+      "projectUrl": "/portfolio/savante-design",
+      "headshot": "savante-design.png"
+    },
+    {
+      "name": "Adele Tara",
+      "project": "Ata Ahi Fitness",
+      "testimonial": "I've really enjoyed having Jack and Otis from Astro Media build and host my website. Their savvy input is considered and insightful. Always pleasant to deal with, honest, trustworthy and encouraging, these guys genuinely care about their work and clients.",
+      "projectUrl": "/portfolio/ataahi-fitness",
+      "headshot": "ataahi-fitness.png"
+    },
+    {
+      "name": "Carolyn Sylvester",
+      "project": "Hidden Gems Lost Landscapes Virtual Art Trail",
+      "testimonial": "Jack and Otis were great to work with.  They took all feedback on board and completed everything in a timely manner as well as offering support on linking the website to an existing one.  We really felt they had a sense of ownership and care towards our art project.",
+      "projectUrl": "/portfolio/art-trail",
+      "headshot": "art-trail.png"
+    },
+    {
+      "name": "Tanya Browne",
+      "project": "Sports Physio NZ",
+      "testimonial": "Jack and Otis from Astromedia are awesome to work with, friendly, professional,  super fast to respond and my new website looks sharp and really personalized to my small physio business.  Highly recommend +++ Looking forward to working with you guys going forward.",
+      "projectUrl": "/portfolio/sports-physio",
+      "headshot": "sports-physio.png"
+    },
+    {
+      "name": "Ahmed Mohamed",
+      "project": "NZ Ethnic Womens",
+      "testimonial": "Astro media is the best website developers I have ever worked with. They helped custom code my whole website from scratch for our organization NZ Ethnic Women's Hub and I'm blow away by there work. I highly recommend there services to anyone seeking high quality websites, these guys are the real deal!",
+      "projectUrl": "/portfolio/ethnic-women",
+      "headshot": "ethnic.png"
+    }
+  ]
 }

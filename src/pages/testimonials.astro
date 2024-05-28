@@ -1,0 +1,71 @@
+---
+import Splash from "~/components/splash.astro";
+import Layout from "~/layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import astroLogo from "~/assets/AstroMediaLogo.svg";
+import aboutUsImg1 from "~/assets/aboutUs/1.jpeg";
+import aboutUsImg2 from "~/assets/aboutUs/2.jpeg";
+
+import config from "~/data/config.json";
+
+const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/clientHeadshots/*.{jpeg,jpg,png,gif}"
+);
+---
+
+<Layout
+  title={`${config.businessName} | Testimonials`}
+  description="See why our clients love working with us! Discover their success stories and learn how Astro Media can help your business shine."
+>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      Testimonials
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+    >
+    </h2>
+  </Splash>
+
+  <section class="my-16 max-md:my-8">
+    <div class="mx-auto grid max-w-screen-xl grid-cols-2 max-md:grid-cols-1">
+      {
+        config.testimonials.map((testimonial, index) => (
+          <div
+            class={`flex flex-col items-center justify-start rounded-lg border border-white p-8`}
+          >
+            <div class="flex flex-col items-center justify-center">
+              <Image
+                class="aspect-square w-52 rounded-full object-cover max-md:w-32"
+                src={headshotImages[
+                  "/src/assets/clientHeadshots/" + testimonial.headshot
+                ]()}
+                alt={testimonial.name}
+              />
+              <h1 class="mt-4 font-bold uppercase text-4xl">
+                {testimonial.name}
+              </h1>
+              <h3 class="text-sm">
+                From
+                <a
+                  href={testimonial.projectUrl}
+                  class="link font-bold uppercase text-primary underline hover:text-white"
+                >
+                  {testimonial.project}
+                </a>
+              </h3>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+              <p class="mt-4 text-center font-extralight italic text-base">
+                {testimonial.testimonial}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
