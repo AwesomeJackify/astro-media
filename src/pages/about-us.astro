@@ -1,0 +1,37 @@
+---
+import Splash from "~/components/splash.astro";
+import Layout from "~/layouts/Layout.astro";
+---
+
+<Layout
+  title="Astro Media | Contact Us"
+  description="Need expert website design and development? Our Auckland team is here to help! As your go-to website developers near you, we create custom websites and digital solutions to elevate your online presence. Let's achieve your business goals together!"
+>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      About Us
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+    >
+    </h2>
+  </Splash>
+
+  <script>
+    import { gsap } from "gsap";
+    import { TextPlugin } from "gsap/TextPlugin";
+    gsap.registerPlugin(TextPlugin);
+
+    gsap.to(".website-tag", {
+      //Subtitle animation
+      duration: 2,
+      text: {
+        value:
+          "Nice to meet you, we're Jack and Otis, your friendly neighbourhood website designers.",
+        delimiter: " ",
+      },
+    });
+  </script>
+</Layout>

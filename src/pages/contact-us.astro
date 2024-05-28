@@ -4,6 +4,7 @@ import ContentSection from "~/components/content-section.astro";
 
 import ShowcaseCard from "~/components/showcase-card.astro";
 import { getShowcase } from "~/data/showcase";
+import Splash from "~/components/splash.astro";
 
 const sites = await getShowcase();
 ---
@@ -12,19 +13,17 @@ const sites = await getShowcase();
   title="Astro Media | Contact Us"
   description="Need expert website design and development? Our Auckland team is here to help! As your go-to website developers near you, we create custom websites and digital solutions to elevate your online presence. Let's achieve your business goals together!"
 >
-  <section
-    class="relative flex h-full min-h-screen flex-col justify-center gap-8 bg-black"
-  >
+  <Splash>
     <h1
       class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
     >
       Contact Us
     </h1>
     <h2
-      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl max-md:text-base"
     >
     </h2>
-  </section>
+  </Splash>
   <section class="my-16 px-2">
     <ContentSection title="Flick Us An Email" id="contact-us">
       <Fragment slot="lead">
@@ -39,7 +38,7 @@ const sites = await getShowcase();
                 type="text"
                 name="floating_first_name"
                 id="floating_first_name"
-                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:focus:border-blue-500"
                 placeholder=" "
                 required
               />
@@ -54,7 +53,7 @@ const sites = await getShowcase();
                 type="text"
                 name="floating_last_name"
                 id="floating_last_name"
-                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:focus:border-blue-500"
                 placeholder=" "
                 required
               />
@@ -70,7 +69,7 @@ const sites = await getShowcase();
               type="email"
               name="floating_email"
               id="floating_email"
-              class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+              class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-default text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:focus:border-blue-500"
               placeholder=" "
               required
             />
@@ -86,7 +85,7 @@ const sites = await getShowcase();
                 type="tel"
                 name="floating_phone"
                 id="floating_phone"
-                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent fill-white py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent fill-white py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:focus:border-blue-500"
                 placeholder=" "
                 required
               />
@@ -101,7 +100,7 @@ const sites = await getShowcase();
                 id="message"
                 name="message"
                 rows="2"
-                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
+                class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent py-2.5 px-0 text-sm focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:focus:border-blue-500"
                 placeholder=" "
                 required></textarea>
               <label
@@ -120,20 +119,27 @@ const sites = await getShowcase();
       </Fragment>
     </ContentSection>
   </section>
-
-  <script>
-    import { gsap } from "gsap";
-    import { TextPlugin } from "gsap/TextPlugin";
-    gsap.registerPlugin(TextPlugin);
-
-    gsap.to(".website-tag", {
-      //Subtitle animation
-      duration: 1,
-      text: {
-        value:
-          "Need expert website design and development? Our Auckland team is here to help! As your go-to website developers near you, we create custom websites and digital solutions to elevate your online presence. Let's achieve your business goals together!",
-        delimiter: " ",
-      },
-    });
-  </script>
+  <section class="mb-16">
+    <ContentSection title="Or Gives Us A Call On" id="call">
+      <Fragment slot="lead">
+        <a href="tel:+640211088932">021 1088 932</a>
+      </Fragment>
+    </ContentSection>
+  </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 1,
+    text: {
+      value:
+        "Need expert website design and development in the area? As your go-to website developers, we create custom websites and digital solutions to elevate your online presence. Let's link up!",
+      delimiter: " ",
+    },
+  });
+</script>

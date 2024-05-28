@@ -4,7 +4,7 @@ const { generator, site } = Astro;
 interface Props {
   title: string;
   description: string;
-  navTop?: boolean;
+  navTop: boolean;
 }
 
 const { title, description, navTop } = Astro.props;
@@ -80,7 +80,7 @@ const keywords =
     </script>
   </head>
   <body
-    class="overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
     <Header navTop={navTop} />
     <slot />

@@ -6,15 +6,10 @@ import type { NavItem } from "~/types";
 import astroLogo from "../assets/AstroMediaLogo.svg";
 
 const navItems: Array<NavItem> = [
-  // { title: "Features", url: "#features" },
+  { title: "About Us", url: "/about-us" },
   { title: "Portfolio", url: "/portfolio" },
-  // { title: "Pricing", url: "#pricing" },
   { title: "Contact Us", url: "/contact-us" },
 ];
-
-interface Props {
-  navTop: boolean;
-}
 
 const { navTop } = Astro.props;
 ---

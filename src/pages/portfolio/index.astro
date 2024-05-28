@@ -1,5 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import Splash from "~/components/splash.astro";
 
 import ShowcaseCard from "~/components/showcase-card.astro";
 import { getShowcase } from "~/data/showcase";
@@ -11,20 +12,18 @@ const sites = await getShowcase();
   title="Astro Media | Portfolio"
   description="Explore our portfolio showcasing top-notch website design and development by the best website developers near you. Based in Auckland, Astro Media crafts custom websites that elevate your business with speed and creativity. Check out our work and see how we can help you stand out online!"
 >
-  <section
-    class="relative flex h-full min-h-screen flex-col justify-center gap-8 bg-black"
-  >
+  <Splash>
     <h1
       class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
     >
       Our Portfolio
     </h1>
     <h2
-      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl max-md:text-base"
     >
     </h2>
-  </section>
-  <section class="mx-auto my-16 max-w-6xl space-y-2">
+  </Splash>
+  <section class="mx-auto my-16 max-w-6xl space-y-2 max-md:my-4">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {sites.map((site) => <ShowcaseCard site={site} />)}
     </div>
@@ -38,7 +37,7 @@ const sites = await getShowcase();
 
   gsap.to(".website-tag", {
     //Subtitle animation
-    duration: 1,
+    duration: 2,
     text: {
       value:
         "Explore our portfolio showcasing top-notch website design to spark your own creativity. Check out our work to see how we can help you stand out in your neighbourhood.",

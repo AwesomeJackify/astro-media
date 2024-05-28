@@ -17,7 +17,26 @@ const description =
 ---
 
 <Layout title={title} description={description}>
-  <Splash />
+  <Splash>
+    <div class="relative flex h-full flex-col items-center justify-center">
+      <h1
+        class="gradient-text mx-8 font-extrabold tracking-tighter text-8xl sm:mx-0"
+      >
+        We transform
+        <br /> your
+        <span class="online-tag">online</span> presence
+      </h1>
+      <h3
+        class="website-tag gradient-text mx-8 mt-4 tracking-tighter text-white text-xl"
+      >
+      </h3>
+      <h2
+        class="subtitle mx-8 mt-4 font-extralight italic tracking-tighter text-stone-300 opacity-0 text-base"
+      >
+        Designing and developing in Auckland, New Zealand since 2023.
+      </h2>
+    </div>
+  </Splash>
   <div class="space-y-24 px-8 py-32">
     <Intro />
     <!-- <Testimonials /> -->
@@ -26,3 +45,39 @@ const description =
     <ContactUs />
   </div>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".online-tag", {
+    //Makes the word "Online" go white
+    duration: 0.5,
+    textShadow: "0px 0px 10px rgba(255, 255, 255, 0.5)",
+    color: "white",
+  });
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 0.6,
+    text: {
+      value: "By building websites that customers trust.",
+      delimiter: "",
+    },
+  });
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 1,
+    delay: 1,
+    color: "white",
+  });
+
+  gsap.to(".subtitle", {
+    //Subtitle animation
+    duration: 1,
+    delay: 1.5,
+    opacity: 1,
+  });
+</script>

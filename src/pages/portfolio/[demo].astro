@@ -17,6 +17,7 @@ export function getStaticPaths() {
 }
 
 import Layout from "~/layouts/Layout.astro";
+import Splash from "~/components/splash.astro";
 
 const { demo } = Astro.params;
 
@@ -32,19 +33,16 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<Layout title={data.title} description={data.description} navTop={false}>
-  <section
-    class="relative flex flex-col justify-center gap-8 bg-black max-md:mt-16"
-  >
-    <Image
-      src={heroImages[
-        "/src/data/showcase/images/sites/" + currentDemoEntry.slug + ".png"
-      ]()}
-      alt={data.title}
-      class="w-full object-contain max-md:hidden"
-    />
-  </section>
-  <section class="my-16 flex flex-col px-2">
+<Layout title={data.title} description={data.description} navTop={true}>
+  <Image
+    src={heroImages[
+      "/src/data/showcase/images/sites/" + currentDemoEntry.slug + ".png"
+    ]()}
+    alt={data.title}
+    class="w-full object-contain max-md:hidden"
+  />
+
+  <section class="my-16 flex flex-col px-2 max-md:mt-24">
     <div
       class="mx-auto flex w-full max-w-screen-xl flex-col gap-16 max-md:gap-6"
     >
