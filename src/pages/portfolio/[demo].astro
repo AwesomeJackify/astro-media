@@ -80,7 +80,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
               {data.gallery.map((image: string) => (
                 <Image
                   src={clientImages[image]()}
-                  alt={image}
+                  alt={data.title}
                   class="h-full w-full object-cover object-top"
                 />
               ))}
