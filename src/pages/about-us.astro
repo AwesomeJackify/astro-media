@@ -1,6 +1,11 @@
 ---
 import Splash from "~/components/splash.astro";
 import Layout from "~/layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import astroLogo from "~/assets/AstroMediaLogo.svg";
+import aboutUsImg1 from "~/assets/aboutUs/1.jpeg";
+import aboutUsImg2 from "~/assets/aboutUs/2.jpeg";
 ---
 
 <Layout
@@ -19,10 +24,46 @@ import Layout from "~/layouts/Layout.astro";
     </h2>
   </Splash>
 
+  <section
+    id="pictures"
+    class="relative flex h-[900px] flex-row justify-center gap-[3000px] overflow-hidden max-md:h-96"
+  >
+    <Image
+      src={astroLogo}
+      alt="About Us 1"
+      class="absolute top-1/2 w-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
+    />
+    <Image
+      src={aboutUsImg1}
+      alt="About Us 1"
+      class="w-1/2 object-cover h-full"
+    />
+    <Image
+      src={aboutUsImg2}
+      alt="About Us 2"
+      class="w-1/2 h-full object-cover"
+    />
+  </section>
+
+  <section class="my-16 flex flex-col">
+    <p class="mx-auto max-w-screen-lg px-2 font-light leading-[80px] text-4xl">
+      Astro Media is a team of chill, down-to-earth people who loves what they
+      do. We believe in learning every day and constantly growing, both on the
+      job and in our personal lives. When we're not creating amazing websites,
+      you can find us hitting the gym, enjoying some kava now and then, and
+      grabbing coffee with our clients. We're all about building strong,
+      personal connections and making the web a better place, one custom website
+      at a time.
+    </p>
+  </section>
+
   <script>
     import { gsap } from "gsap";
     import { TextPlugin } from "gsap/TextPlugin";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
     gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".website-tag", {
       //Subtitle animation
@@ -32,6 +73,16 @@ import Layout from "~/layouts/Layout.astro";
           "Nice to meet you, we're Jack and Otis, your friendly neighbourhood website designers.",
         delimiter: " ",
       },
+    });
+
+    gsap.to("#pictures", {
+      scrollTrigger: {
+        trigger: "#pictures",
+        start: "top center",
+        end: "50% center",
+        scrub: 1,
+      },
+      gap: 0,
     });
   </script>
 </Layout>
