@@ -1,0 +1,76 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export function getStaticPaths() {
+  return [
+    { params: { testimonial: "art-trail" } },
+    { params: { testimonial: "forever-clean" } },
+    { params: { testimonial: "ethnic-women" } },
+    { params: { testimonial: "sports-physio" } },
+    { params: { testimonial: "savante-design" } },
+    { params: { testimonial: "ataahi-fitness" } },
+    { params: { testimonial: "victorian-spas" } },
+  ];
+}
+
+import Layout from "~/layouts/Layout.astro";
+import Splash from "~/components/splash.astro";
+import config from "~/data/config.json";
+
+const { testimonial } = Astro.params;
+
+const currentTestimonial = config.testimonials.find(
+  (currentTestimonial) => currentTestimonial.slug === testimonial
+);
+
+if (currentTestimonial === undefined) {
+  throw new Error("Testimonial not found");
+}
+
+const heroImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/data/showcase/images/sites/*.{jpeg,jpg,png,gif}"
+);
+
+const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/clientHeadshots/*.{jpeg,jpg,png,gif}"
+);
+---
+
+<Layout
+  title={currentTestimonial.name}
+  description={currentTestimonial.testimonial}
+  navTop={true}
+>
+  <section
+    class={`flex flex-col items-center justify-start rounded-lg p-8 mt-24 max-w-screen-lg mx-auto`}
+  >
+    <div class="flex flex-col items-center justify-center">
+      <Image
+        class="aspect-square w-52 rounded-full object-cover max-md:w-32"
+        src={headshotImages[
+          "/src/assets/clientHeadshots/" + currentTestimonial.headshot
+        ]()}
+        alt={currentTestimonial.name}
+      />
+      <h1 class="mt-4 font-bold uppercase text-4xl">
+        {currentTestimonial.name}
+      </h1>
+      <h3 class="text-sm">
+        From
+        <a
+          href={currentTestimonial.projectUrl}
+          class="link font-bold uppercase text-primary underline hover:text-white"
+        >
+          {currentTestimonial.project}
+        </a>
+      </h3>
+    </div>
+    <div class="flex flex-col items-center gap-4">
+      <p class="mt-4 text-center font-extralight italic text-base">
+        {currentTestimonial.testimonial}
+      </p>
+    </div>
+  </section>
+</Layout>
