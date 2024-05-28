@@ -4,7 +4,7 @@ const { generator, site } = Astro;
 interface Props {
   title: string;
   description: string;
-  navTop: boolean;
+  navTop?: boolean;
 }
 
 const { title, description, navTop } = Astro.props;
