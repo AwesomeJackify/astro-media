@@ -29,10 +29,6 @@ if (currentTestimonial === undefined) {
   throw new Error("Testimonial not found");
 }
 
-const heroImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/data/showcase/images/sites/*.{jpeg,jpg,png,gif}"
-);
-
 const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/clientHeadshots/*.{jpeg,jpg,png,gif}"
 );

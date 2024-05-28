@@ -19,9 +19,23 @@ export function getStaticPaths() {
 import Layout from "~/layouts/Layout.astro";
 import Splash from "~/components/splash.astro";
 
+import config from "~/data/config.json";
+
 const { demo } = Astro.params;
 
 const currentDemoEntry = await getEntry("demos", demo);
+
+if (!currentDemoEntry) {
+  return {
+    status: 404,
+    error: new Error(`Portfolio item ${demo} not found`),
+  };
+}
+
+const currentTestimonial = config.testimonials.find(
+  (currentTestimonial) => currentTestimonial.slug === currentDemoEntry.slug
+);
+
 const data = currentDemoEntry.data;
 
 const heroImages = import.meta.glob<{ default: ImageMetadata }>(
@@ -51,20 +65,30 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
           {data.title}
         </h1>
 
-        <a href={data.url} class="link-[orange-500] link" target="_blank"
+        <a href={data.url} class="underline" target="_blank"
           >Visit the website</a
         >
       </div>
       <div class="flex flex-col gap-8">
-        <h2 class="font-light underline text-4xl">Project Description</h2>
+        <h2 class="font-light text-4xl">Project Description</h2>
         <p class="max-w-screen-md whitespace-pre-line text-sm">
           {data.description}
         </p>
+        {
+          currentTestimonial && (
+            <a
+              class="underline"
+              href={"/testimonials/" + currentTestimonial.slug}
+            >
+              View testimonial
+            </a>
+          )
+        }
       </div>
       {
         data.gallery.length > 0 ? (
           <div class="flex flex-col gap-8">
-            <h2 class="font-light underline text-4xl">Gallery</h2>
+            <h2 class="font-light text-4xl">Gallery</h2>
             <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1 max-md:gap-4">
               <Image
                 src={heroImages[
@@ -75,7 +99,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
                 alt={data.title}
                 class="h-full w-full object-cover md:hidden"
               />
-              {data.gallery.map((image: string) => (
+              {data.gallery.map((image: any) => (
                 <Image
                   src={clientImages[image]()}
                   alt={data.title}
@@ -97,7 +121,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
                 alt={data.title}
                 class="h-full w-full object-cover md:hidden"
               />
-              {data.gallery.map((image: string) => (
+              {data.gallery.map((image: any) => (
                 <Image
                   src={clientImages[image]()}
                   alt={image}
