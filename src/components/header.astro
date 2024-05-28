@@ -9,6 +9,7 @@ const navItems: Array<NavItem> = [
   { title: "About Us", url: "/about-us" },
   { title: "Portfolio", url: "/portfolio" },
   { title: "Testimonials", url: "/testimonials" },
+  { title: "FAQ", url: "/faq" },
   { title: "Contact Us", url: "/contact-us" },
 ];
 
@@ -44,21 +45,21 @@ const { navTop } = Astro.props;
       <button
         id="open-nav-button"
         type="button"
-        class="btn sm:hidden"
+        class="btn-default sm:hidden"
         aria-label="Navigation"
       >
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
       <ThemeSwitcher />
     </div>
-    <div id="menu-modal" class="modal hidden" aria-hidden="true">
+    <div id="menu-modal" class="modal-default hidden" aria-hidden="true">
       <div class="fixed inset-0 bg-default px-8 py-4 text-default">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
             <button
               id="close-nav-button"
               type="button"
-              class="btn"
+              class="btn-default"
               aria-label="Close navigation"
             >
               <Icon pack="mdi" name="close" class="h-8" />
@@ -145,7 +146,7 @@ const { navTop } = Astro.props;
     @apply fixed bottom-auto top-0;
     @apply border-default bg-default text-default;
   }
-  .modal.is-open {
+  .modal-default.is-open {
     @apply block;
   }
 </style>

@@ -1,0 +1,66 @@
+---
+import Splash from "~/components/splash.astro";
+import Layout from "~/layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import astroLogo from "~/assets/AstroMediaLogo.svg";
+import aboutUsImg1 from "~/assets/aboutUs/1.jpeg";
+import aboutUsImg2 from "~/assets/aboutUs/2.jpeg";
+
+import config from "~/data/config.json";
+---
+
+<Layout
+  title={`${config.businessName} | About Us`}
+  description="Need expert website design and development? Our Auckland team is here to help! As your go-to website developers near you, we create custom websites and digital solutions to elevate your online presence. Let's achieve your business goals together!"
+>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      FAQ
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+    >
+    </h2>
+  </Splash>
+
+  <section
+    class="mx-auto my-16 flex max-w-screen-lg flex-col gap-1 max-md:my-16"
+  >
+    <h1 class="mb-16 text-7xl max-md:mb-8">Frequently Asked Question</h1>
+    {
+      config.faqs.map((faq) => (
+        <div class="collapse bg-stone-900 text-white">
+          <input type="radio" name="my-accordion-1" />
+          <div class="collapse-title font-medium text-xl">
+            <p class="text-2xl ">{faq.question}</p>
+          </div>
+          <div class="collapse-content">
+            <p class="font-light">{faq.answer}</p>
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "Got questions? We've got answers! Explore our FAQ section for quick and easy information on all things web development.",
+      delimiter: " ",
+    },
+  });
+</script>

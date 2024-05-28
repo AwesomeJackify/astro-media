@@ -29,5 +29,21 @@ module.exports = {
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require("tailwindcss-fluid-type")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#f97316",
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "#f97316",
+        },
+      },
+    ],
+  },
+  plugins: [require("tailwindcss-fluid-type"), require("daisyui")],
 };

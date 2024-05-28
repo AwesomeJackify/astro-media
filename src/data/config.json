@@ -57,5 +57,37 @@
       "projectUrl": "/portfolio/forever-clean",
       "headshot": "forever-clean.png"
     }
+  ],
+  "faqs": [
+    {
+      "name": "cost",
+      "question": "How much does a website designer cost?",
+      "answer": "The cost of a website designer can vary widely based on the complexity of the project, the experience of the designer, and the specific needs of your business. We offer competitive pricing tailored to suit small businesses. We believe in transparent pricing with no hidden fees, ensuring you get the best value for your investment."
+    },
+    {
+      "name": "what_is_designer",
+      "question": "What is a website designer?",
+      "answer": "A website designer is a professional who specialises in creating the layout, visual appearance, and usability of a website. They work on the overall look and feel of the site, ensuring it is aesthetically pleasing and user-friendly. We focus on crafting custom websites that reflect your brand and engage your audience."
+    },
+    {
+      "name": "what_to_look_for",
+      "question": "What to look for in a website designer?",
+      "answer": "When choosing a website designer, look for experience, a strong portfolio, and good communication skills. It's also important to find someone who understands your business goals and can tailor the website to meet your specific needs. We pride ourselves on our expertise, our ability to deliver personalised designs, and our commitment to client satisfaction."
+    },
+    {
+      "name": "wix_vs_handmade",
+      "question": "(Wix, Squarespace) vs. Hand-made websites",
+      "answer": "While platforms like Wix and Squarespace offer convenient and cost-effective solutions, they often come with limitations in terms of customisation and functionality. Hand-made websites, like those crafted by Astro Media NZ, offer complete flexibility, scalability, and a unique design tailored to your business needs. Investing in a custom website can provide a more professional and personalised online presence."
+    },
+    {
+      "name": "local_advantage",
+      "question": "Why choose a local website designer?",
+      "answer": "Choosing a local website designer, like Astro Media NZ, has several advantages. We understand the local market and can provide personalised service and support. Being in the same time zone means faster communication and more efficient project management. Plus, supporting local businesses helps strengthen the community."
+    },
+    {
+      "name": "hand_written_code",
+      "question": "Why is hand-written code important?",
+      "answer": "Hand-written code ensures that your website is optimised for performance, security, and scalability. It allows for greater customisation and flexibility, ensuring that your website meets your specific needs. We pride ourselves on writing clean, efficient code that adheres to best practices and industry standards."
+    }
   ]
 }
