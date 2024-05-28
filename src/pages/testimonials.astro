@@ -30,7 +30,7 @@ const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
     </h2>
   </Splash>
 
-  <section class="my-16 max-md:my-8">
+  <section class="my-16 px-2 max-md:my-8">
     <div class="mx-auto grid max-w-screen-xl grid-cols-2 max-md:grid-cols-1">
       {
         config.testimonials.map((testimonial, index) => (
@@ -86,15 +86,5 @@ const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
         "See why our clients love working with us! Our expert website developers create custom websites that elevate online presence. Discover their success stories and learn how Astro Media can help your business shine.",
       delimiter: " ",
     },
-  });
-
-  gsap.to(".aboutUsImg", {
-    scrollTrigger: {
-      trigger: "#pictures",
-      start: "top center",
-      end: "50% center",
-      scrub: 1,
-    },
-    x: 0,
   });
 </script>
