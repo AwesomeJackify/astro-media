@@ -58,33 +58,33 @@ import config from "~/data/config.json";
       at a time.
     </p>
   </section>
-
-  <script>
-    import { gsap } from "gsap";
-    import { TextPlugin } from "gsap/TextPlugin";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(TextPlugin);
-
-    gsap.to(".website-tag", {
-      //Subtitle animation
-      duration: 2,
-      text: {
-        value:
-          "Nice to meet you, we're Jack and Otis, your friendly neighbourhood website designers.",
-        delimiter: " ",
-      },
-    });
-
-    gsap.to(".aboutUsImg", {
-      scrollTrigger: {
-        trigger: "#pictures",
-        start: "top center",
-        end: "50% center",
-        scrub: 1,
-      },
-      x: 0,
-    });
-  </script>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "Nice to meet you, we're Jack and Otis, your friendly neighbourhood website designers.",
+      delimiter: " ",
+    },
+  });
+
+  gsap.to(".aboutUsImg", {
+    scrollTrigger: {
+      trigger: "#pictures",
+      start: "top center",
+      end: "50% center",
+      scrub: 1,
+    },
+    x: 0,
+  });
+</script>

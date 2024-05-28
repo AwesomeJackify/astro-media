@@ -69,3 +69,32 @@ const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
     </div>
   </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "See why our clients love working with us! Our expert website developers create custom websites that elevate online presence. Discover their success stories and learn how Astro Media can help your business shine.",
+      delimiter: " ",
+    },
+  });
+
+  gsap.to(".aboutUsImg", {
+    scrollTrigger: {
+      trigger: "#pictures",
+      start: "top center",
+      end: "50% center",
+      scrub: 1,
+    },
+    x: 0,
+  });
+</script>
