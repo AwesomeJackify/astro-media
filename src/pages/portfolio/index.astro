@@ -1,0 +1,38 @@
+---
+import Layout from "~/layouts/Layout.astro";
+---
+
+<Layout
+  title="Astro Media | Portfolio"
+  description="Explore our portfolio showcasing top-notch website design and development by the best website developers near you. Based in Auckland, Astro Media crafts custom websites that elevate your business with speed and creativity. Check out our work and see how we can help you stand out online!"
+>
+  <section
+    class="relative flex h-full min-h-screen flex-col justify-center gap-8 bg-black"
+  >
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      Our Portfolio
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white"
+    >
+    </h2>
+  </section>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 1,
+    text: {
+      value:
+        "Explore our portfolio showcasing top-notch website design and developmentby the best website developers near you. Check out our work and see how we can help you stand out online.",
+      delimiter: " ",
+    },
+  });
+</script>

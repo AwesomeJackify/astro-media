@@ -1,0 +1,115 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+export function getStaticPaths() {
+  return [
+    { params: { demo: "art-trail" } },
+    { params: { demo: "forever-clean" } },
+    { params: { demo: "ethnic-women" } },
+    { params: { demo: "the-potcast" } },
+    { params: { demo: "sports-physio" } },
+    { params: { demo: "savante-design" } },
+    { params: { demo: "ataahi-fitness" } },
+    { params: { demo: "victorian-spas" } },
+  ];
+}
+
+import Layout from "~/layouts/Layout.astro";
+
+const { demo } = Astro.params;
+
+const currentDemoEntry = await getEntry("demos", demo);
+const data = currentDemoEntry.data;
+
+const heroImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/data/showcase/images/sites/*.{jpeg,jpg,png,gif}"
+);
+
+const clientImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/data/showcase/images/clients/**/*.{jpeg,jpg,png,gif}"
+);
+---
+
+<Layout title={data.title} description={data.description} navTop={true}>
+  <section
+    class="relative flex flex-col justify-center gap-8 bg-black max-md:mt-16"
+  >
+    <Image
+      src={heroImages[
+        "/src/data/showcase/images/sites/" + currentDemoEntry.slug + ".png"
+      ]()}
+      alt={data.title}
+      class="w-full object-contain max-md:hidden"
+    />
+  </section>
+  <section class="my-16 flex flex-col px-2">
+    <div
+      class="mx-auto flex w-full max-w-screen-xl flex-col gap-16 max-md:gap-6"
+    >
+      <div class="flex flex-col gap-4">
+        <h1 class="w-full font-extrabold text-primary text-9xl">
+          {data.title}
+        </h1>
+
+        <a href={data.url} class="link-[orange-500] link" target="_blank"
+          >Visit the website</a
+        >
+      </div>
+      <div class="flex flex-col gap-8">
+        <h2 class="font-light underline text-4xl">Project Description</h2>
+        <p class="max-w-screen-md whitespace-pre-line text-sm">
+          {data.description}
+        </p>
+      </div>
+      {
+        data.gallery.length > 0 ? (
+          <div class="flex flex-col gap-8">
+            <h2 class="font-light underline text-4xl">Gallery</h2>
+            <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1 max-md:gap-4">
+              <Image
+                src={heroImages[
+                  "/src/data/showcase/images/sites/" +
+                    currentDemoEntry.slug +
+                    ".png"
+                ]()}
+                alt={data.title}
+                class="h-full w-full object-cover md:hidden"
+              />
+              {data.gallery.map((image: string) => (
+                <Image
+                  src={clientImages[image]()}
+                  alt={image}
+                  class="h-full w-full object-cover object-top"
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div class="flex flex-col gap-8 md:hidden">
+            <h2 class="font-light underline text-4xl">Gallery</h2>
+            <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1 max-md:gap-4">
+              <Image
+                src={heroImages[
+                  "/src/data/showcase/images/sites/" +
+                    currentDemoEntry.slug +
+                    ".png"
+                ]()}
+                alt={data.title}
+                class="h-full w-full object-cover md:hidden"
+              />
+              {data.gallery.map((image: string) => (
+                <Image
+                  src={clientImages[image]()}
+                  alt={image}
+                  class="h-full w-full object-cover object-top"
+                />
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Layout>

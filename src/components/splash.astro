@@ -2,19 +2,26 @@
 import ThreeJs from "./three-js.astro";
 ---
 
-<section class="relative h-full bg-black">
+<section
+  class="relative flex h-full min-h-screen flex-col justify-center bg-black"
+>
   <div class="relative flex h-full flex-col items-center justify-center">
-    <h2
+    <h1
       class="gradient-text mx-8 font-extrabold tracking-tighter text-8xl sm:mx-0"
     >
       We transform
       <br /> your
       <span class="online-tag">online</span> presence
-    </h2>
+    </h1>
     <h3
       class="website-tag gradient-text mx-8 mt-4 tracking-tighter text-white text-xl"
     >
     </h3>
+    <h2
+      class="subtitle mx-8 mt-4 font-extralight italic tracking-tighter text-stone-300 opacity-0 text-base"
+    >
+      Designing websites in Auckland, New Zealand since 2023.
+    </h2>
   </div>
 </section>
 
@@ -34,8 +41,7 @@ import ThreeJs from "./three-js.astro";
     //Subtitle animation
     duration: 0.6,
     text: {
-      value: "By building awesome websites that customers trust.",
-      ease: "none",
+      value: "By building the websites that customers trust.",
       delimiter: "",
     },
   });
@@ -45,5 +51,12 @@ import ThreeJs from "./three-js.astro";
     duration: 1,
     delay: 1,
     color: "white",
+  });
+
+  gsap.to(".subtitle", {
+    //Subtitle animation
+    duration: 1,
+    delay: 1.5,
+    opacity: 1,
   });
 </script>

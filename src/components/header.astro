@@ -6,18 +6,26 @@ import type { NavItem } from "~/types";
 import astroLogo from "../assets/AstroMediaLogo.svg";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Demos", url: "#demos" },
+  // { title: "Features", url: "#features" },
+  { title: "Portfolio", url: "/portfolio" },
   // { title: "Pricing", url: "#pricing" },
   { title: "Contact Us", url: "#contact-us" },
 ];
+
+interface Props {
+  navTop: boolean;
+}
+
+const { navTop } = Astro.props;
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class={`absolute ${
+    navTop ? "top-0" : "bottom-0"
+  } z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white`}
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
+  <a class="flex items-center gap-3 hover:!text-default" href="/">
     <h1 class="sr-only">Astro Media</h1>
     <Image src={astroLogo} alt="image description" class="h-8 w-fit" />
     <!-- <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
@@ -61,7 +69,13 @@ const navItems: Array<NavItem> = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <a href="/">
+              <Image
+                src={astroLogo}
+                alt="image description"
+                class="h-16 w-fit"
+              />
+            </a>
           </div>
           <nav>
             <ul class="flex flex-col">
