@@ -28,7 +28,7 @@ import config from "~/data/config.json";
 
   <section
     id="pictures"
-    class="relative flex h-[900px] flex-row justify-center gap-[3000px] overflow-hidden max-md:h-96"
+    class="relative flex h-[900px] flex-row justify-center overflow-hidden max-md:h-96"
   >
     <Image
       src={astroLogo}
@@ -38,12 +38,12 @@ import config from "~/data/config.json";
     <Image
       src={aboutUsImg1}
       alt="About Us 1"
-      class="w-1/2 object-cover h-full"
+      class="aboutUsImg w-1/2 object-cover h-full -translate-x-[1000px]"
     />
     <Image
       src={aboutUsImg2}
       alt="About Us 2"
-      class="w-1/2 h-full object-cover"
+      class="aboutUsImg w-1/2 h-full object-cover translate-x-[1000px]"
     />
   </section>
 
@@ -64,8 +64,8 @@ import config from "~/data/config.json";
     import { TextPlugin } from "gsap/TextPlugin";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    gsap.registerPlugin(TextPlugin);
     gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(TextPlugin);
 
     gsap.to(".website-tag", {
       //Subtitle animation
@@ -77,14 +77,14 @@ import config from "~/data/config.json";
       },
     });
 
-    gsap.to("#pictures", {
+    gsap.to(".aboutUsImg", {
       scrollTrigger: {
         trigger: "#pictures",
         start: "top center",
         end: "50% center",
         scrub: 1,
       },
-      gap: 0,
+      x: 0,
     });
   </script>
 </Layout>
