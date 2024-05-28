@@ -77,7 +77,7 @@
     {
       "name": "wix_vs_handmade",
       "question": "(Wix, Squarespace) vs. Hand-made websites",
-      "answer": "While platforms like Wix and Squarespace offer convenient and cost-effective solutions, they often come with limitations in terms of customisation and functionality. Hand-made websites, like those crafted by Astro Media NZ, offer complete flexibility, scalability, and a unique design tailored to your business needs. Investing in a custom website can provide a more professional and personalised online presence."
+      "answer": "While platforms like Wix and Squarespace offer convenient and cost-effective solutions, they often come with limitations in terms of customisation and functionality. Hand-made websites, like those crafted by Astro Media NZ, offer complete flexibility, scalability, and a unique design tailored to your business needs. Investing in a custom website can provide a more professional and personalised online presence, saving you the time and effort of trying to build it yourself."
     },
     {
       "name": "local_advantage",
@@ -85,9 +85,9 @@
       "answer": "Choosing a local website designer, like Astro Media NZ, has several advantages. We understand the local market and can provide personalised service and support. Being in the same time zone means faster communication and more efficient project management. Plus, supporting local businesses helps strengthen the community."
     },
     {
-      "name": "hand_written_code",
-      "question": "Why is hand-written code important?",
-      "answer": "Hand-written code ensures that your website is optimised for performance, security, and scalability. It allows for greater customisation and flexibility, ensuring that your website meets your specific needs. We pride ourselves on writing clean, efficient code that adheres to best practices and industry standards."
+      "name": "google_business_listing",
+      "question": "Why is having a Google Business listing important?",
+      "answer": "Having a Google Business listing is crucial for gaining more exposure and attracting local customers. It ensures your business appears prominently in search results and on Google Maps, providing essential information such as your address, hours, and contact details. Without a listing, you miss out on valuable space on the right-hand side of search results, where customers often look for quick business information. A well-optimised Google Business listing can enhance your online presence, drive traffic to your website, and ultimately increase sales."
     }
   ]
 }
