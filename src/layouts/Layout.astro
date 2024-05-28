@@ -13,6 +13,8 @@ import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import "~/styles/index.css";
 
+import config from "~/data/config.json";
+
 const image = new URL("social.png", site);
 const keywords =
   "New Zealand, Auckland, Web Developer, Web Design, Hire, Cheap, Website, SEO, Digital Branding";
@@ -46,7 +48,7 @@ const keywords =
     <meta name="keywords" content={keywords} />
 
     <!-- social media -->
-    <meta property="og:title" content="Astro Media NZ" />
+    <meta property="og:title" content={config.businessName} />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />

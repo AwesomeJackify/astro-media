@@ -6,10 +6,12 @@ import { Image } from "astro:assets";
 import astroLogo from "~/assets/AstroMediaLogo.svg";
 import aboutUsImg1 from "~/assets/aboutUs/1.jpeg";
 import aboutUsImg2 from "~/assets/aboutUs/2.jpeg";
+
+import config from "~/data/config.json";
 ---
 
 <Layout
-  title="Astro Media | Contact Us"
+  title={`${config.businessName} | About Us`}
   description="Need expert website design and development? Our Auckland team is here to help! As your go-to website developers near you, we create custom websites and digital solutions to elevate your online presence. Let's achieve your business goals together!"
 >
   <Splash>

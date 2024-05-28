@@ -10,7 +10,9 @@ import Demos from "../components/demos.astro";
 import Content from "~/components/content.astro";
 import Layout from "~/layouts/Layout.astro";
 
-const title = "Astro Media | Best Website Design in Auckland, NZ";
+import config from "~/data/config.json";
+
+const title = config.businessName + " | Best Website Design in Auckland, NZ";
 
 const description =
   "Astro Media is a creative and energetic digital agency that values speed, helping your business reach new heights. We're based right here in Auckland, New Zealand, and we're all about website design and development that truly stands out. If you're looking for the best website developers near me, we've got you covered!";

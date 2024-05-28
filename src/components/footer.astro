@@ -5,6 +5,8 @@ import type { FooterLink } from "~/types";
 import logo from "~/assets/AstroMediaLogo.svg";
 import { Image } from "astro:assets";
 
+import config from "~/data/config.json";
+
 const links: Array<FooterLink> = [
   {
     url: "https://www.neighbourly.co.nz/business/astro-media",
@@ -51,7 +53,7 @@ const links: Array<FooterLink> = [
     <div
       class="flex w-full items-center justify-between max-md:flex-col max-md:gap-6"
     >
-      <p class="text-xs">© Astro Media NZ. All right reserved</p>
+      <p class="text-xs">© {config.businessName}. All right reserved</p>
     </div>
   </div>
 </footer>
