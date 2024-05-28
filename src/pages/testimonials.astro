@@ -31,7 +31,9 @@ const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
   </Splash>
 
   <section class="my-16 px-2 max-md:my-8">
-    <div class="mx-auto grid max-w-screen-xl grid-cols-2 max-md:grid-cols-1">
+    <div
+      class="mx-auto grid max-w-screen-xl grid-cols-2 gap-8 max-md:grid-cols-1"
+    >
       {
         config.testimonials.map((testimonial, index) => (
           <div

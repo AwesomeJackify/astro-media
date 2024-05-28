@@ -42,6 +42,13 @@
       "testimonial": "Astro media is the best website developers I have ever worked with. They helped custom code my whole website from scratch for our organization NZ Ethnic Women's Hub and I'm blow away by there work. I highly recommend there services to anyone seeking high quality websites, these guys are the real deal!",
       "projectUrl": "/portfolio/ethnic-women",
       "headshot": "ethnic.png"
+    },
+    {
+      "name": "Blake Davies",
+      "project": "Forever Clean",
+      "testimonial": "Best team to work with, always putting customers first and do a quality job of bringing your vision to life. HIGHLY RECOMMEND!!",
+      "projectUrl": "/portfolio/forever-clean",
+      "headshot": "forever-clean.png"
     }
   ]
 }
