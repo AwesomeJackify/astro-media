@@ -1,5 +1,7 @@
 {
   "businessName": "Astro Media NZ",
+  "city": "Auckland",
+  "country": "New Zealand",
   "testimonials": [
     {
       "name": "Sam Singh",
