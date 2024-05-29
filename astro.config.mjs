@@ -1,6 +1,7 @@
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import { remarkModifiedTime } from "./remark-modified-time.mjs";
 
 import react from "@astrojs/react";
 
@@ -10,7 +11,10 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), react()],
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
-  }
+      external: ["svgo"],
+    },
+  },
+  markdown: {
+    remarkPlugins: [remarkModifiedTime],
+  },
 });

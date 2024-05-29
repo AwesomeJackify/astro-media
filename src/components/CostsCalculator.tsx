@@ -149,12 +149,15 @@ const CostsCalculator = () => {
           return (
             <div
               key={index}
-              className="grid w-full grid-cols-2 items-start gap-4 overflow-hidden max-md:grid-cols-1 max-md:place-items-center"
+              className="grid w-full grid-cols-2 items-start gap-4 max-md:grid-cols-1 max-md:place-items-center"
             >
-              <label className="inline items-start justify-start gap-1 font-medium capitalize text-2xl max-md:text-lg">
+              <label
+                className="inline items-start justify-start gap-1 font-medium capitalize text-2xl max-md:text-lg"
+                htmlFor={option.name}
+              >
                 {option.name}
                 <div
-                  className="tooltip ml-1 w-fit normal-case"
+                  className="tooltip ml-1 w-fit normal-case max-md:hidden"
                   data-tip={option.tip}
                 >
                   <IoMdInformationCircle className="text-sm" />
@@ -165,6 +168,7 @@ const CostsCalculator = () => {
                   <input
                     type="range"
                     min={0}
+                    id={option.name}
                     max={option.max}
                     defaultValue={String(option.value)}
                     onChange={(e) => option.handleSetter(e.target.value)}
@@ -180,6 +184,7 @@ const CostsCalculator = () => {
                 <input
                   type="checkbox"
                   className="checkbox my-auto aspect-square"
+                  id={option.name}
                   defaultChecked={option.value}
                   onChange={(e) => option.handleSetter(e.target.checked)}
                 />
@@ -190,6 +195,7 @@ const CostsCalculator = () => {
                     key={index}
                     className="select border-2 border-neutral"
                     onChange={(e) => option.handleSetter(e.target.value)}
+                    id={option.name}
                   >
                     {option.values &&
                       option.values.map((value, index) => {

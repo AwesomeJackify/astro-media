@@ -1,5 +1,4 @@
 ---
-slug: art-trail
 title: Hidden Gems Lost Landscapes Art Trail
 description:
   This art trail covers some of the most incredible hidden natural areas in the Albert Eden area. You will discover the oldest lava forest in the country, the remnants of the Cabbage Tree Lake, and the restored aquifer-fed wetland on Roy Clements Treeway. These landscapes are now nationally rare, quite hidden, and breathtakingly beautiful.

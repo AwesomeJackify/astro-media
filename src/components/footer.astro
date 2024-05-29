@@ -27,7 +27,13 @@ const links: Array<FooterLink> = [
   </div>
   <div class="z-10 flex w-full flex-col gap-8">
     <div class="relative flex flex-col items-center gap-8">
-      <Image src={logo} alt="Astro Media Logo" class="h-16 w-16" />
+      <a href="/">
+        <Image
+          src={logo}
+          alt="Astro Media Logo"
+          class="bg-default p-4 w-32 rounded-2xl"
+        />
+      </a>
       <ul class="relative flex justify-center gap-4">
         <li>
           <a

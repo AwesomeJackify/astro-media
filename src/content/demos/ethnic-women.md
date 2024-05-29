@@ -1,5 +1,4 @@
 ---
-slug: ethnic-women
 title: NZ Ethnic Women's Trust
 description:
   The NZ Ethnic Women's Trust, established in 2001, is a charitable society that supports women of various ethnicities, mainly from Africa, South Asia, and the Middle East. A significant number of these women are refugees facing challenges in integrating into New Zealand society, often hindered by limited English proficiency, lack of local work experience, and large family responsibilities. NZEWT provides various services, including English classes, health education, and playgroups to foster bilingualism, aimed at developing skills and confidence for easier settlement in New Zealand. The organization is primarily volunteer-run, with paid roles limited to specific service providers like sewing teachers and playgroup coordinators.

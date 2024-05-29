@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { CollectionEntry, getCollection } from "astro:content";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
+export async function getStaticPaths() {
+  const blog = await getCollection("blog");
+  return blog.map((entry) => ({
+    params: { blog: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const data = entry.data;
+
+const { Content, remarkPluginFrontmatter } = await entry.render();
+
+const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
+  .utc()
+  .format("HH:mm:ss DD MMMM YYYY UTC");
+---
+
+<Layout title={data.title} description={data.description} navTop>
+  <section
+    class="bg-default py-16 pt-32 prose-headings:text-default prose-p:text-default prose-a:text-default prose-strong:text-default prose-ol:text-default prose-ul:text-default"
+  >
+    <article class="prose mx-auto">
+      {lastModified}
+      <Content />
+    </article>
+  </section>
+</Layout>

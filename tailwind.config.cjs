@@ -45,5 +45,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("tailwindcss-fluid-type"), require("daisyui")],
+  plugins: [
+    require("tailwindcss-fluid-type"),
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+  ],
 };

@@ -1,5 +1,4 @@
 ---
-slug: victorian-spas
 title: Victorian Spas
 description:
   Welcome to Victorian Bali Spa - a hidden gem located in the heart of Auckland's CBD and Ponsonby.

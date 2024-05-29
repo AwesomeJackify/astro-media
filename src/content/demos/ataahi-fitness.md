@@ -1,5 +1,4 @@
 ---
-slug: ataahi-fitness
 title: Ata Ahi Fitness
 description:
   NAU MAI, HAERE MAI. Ia Orāna, Welcome to Ata Ahi Fitness & Wellbeing

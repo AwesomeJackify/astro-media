@@ -1,5 +1,4 @@
 ---
-slug: sports-physio
 title: Sports Physio NZ
 description:
   Tanya has over 25 years clinical experience in Private practice physiotherapy. She has a holistic approach to Physiotherapy practice, ensuring accurate diagnosis, evidence informed treatment, individualised approach and effective care for all Musculoskeletal and Sports injuries and presentations. Treatment may include hands on/ manual therapy techniques and Exercise Rehabilitation alongside Patient education in self care, injury prevention and recovery.
