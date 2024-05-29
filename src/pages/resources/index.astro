@@ -2,16 +2,17 @@
 import Layout from "~/layouts/Layout.astro";
 import CalculateCosts from "~/components/CostsCalculatorr";
 
+import Icon from "astro-icon";
+
 import config from "~/data/config.json";
 import Splash from "~/components/splash.astro";
 
-const title = config.businessName + " | Best Website Design in Auckland, NZ";
+const metaData = config.metaData.find((data: any) => data.name == "resources");
 
-const description =
-  "Astro Media offers a variety of tools and resources to help your business succeed. Our resources page is packed with useful tools like calculators and more, all designed to help you make the best choice possible.";
+const title = config.businessName + " | " + metaData.title;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={metaData.description}>
   <Splash>
     <h1
       class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
@@ -23,12 +24,35 @@ const description =
     >
     </h2>
   </Splash>
+  <section class="mx-auto flex max-w-screen-xl flex-col py-16">
+    <a
+      href="/resources/costs-calculator"
+      class="flex items-center hover:text-primary"
+    >
+      <Icon name="mdi:calculator" class="w-24 aspect-square" />
+      <div class="flex flex-col">
+        <h1 class="font-bold text-4xl">Website Costs Calculator</h1>
+        <p class="max-w-screen-md truncate text-sm">
+          {
+            config.metaData.find((data: any) => data.name == "costs-calculator")
+              .description
+          }
+        </p>
+      </div>
+    </a>
+  </section>
 </Layout>
 
 <script>
   import { gsap } from "gsap";
   import { TextPlugin } from "gsap/TextPlugin";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  import config from "../../data/config.json";
+
+  const metaData = config.metaData.find(
+    (data: any) => data.name == "resources"
+  );
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(TextPlugin);
@@ -37,8 +61,7 @@ const description =
     //Subtitle animation
     duration: 2,
     text: {
-      value:
-        "Astro Media offers a variety of tools and resources to help your business succeed. Our resources page is packed with useful tools like calculators and more, all designed to help you make the best choice possible.",
+      value: metaData?.description || "",
       delimiter: " ",
     },
   });

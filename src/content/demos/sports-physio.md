@@ -8,8 +8,8 @@ description:
   Tanya is focused on helping patients understand their physical injury/ challenge in a holistic way. Current medical science recognises that physical injuries and pain are influenced by multiple factors including mental health, social, lifestyle, occupation and activity specific factors and loading. Holistic Physiotherapy aims to assist you to not just recover from injury or painful conditions, but to prevent recurrence and enjoy an active lifestyle.
 gallery:
   [
-    "/src/data/showcase/images/clients/sports-physio/1.jpeg",
-    "/src/data/showcase/images/clients/sports-physio/2.jpeg",
+    "/src/data/portfolio/images/clients/sports-physio/1.jpeg",
+    "/src/data/portfolio/images/clients/sports-physio/2.jpeg",
   ]
 url: "https://sportsphysio.co.nz/"
 ---

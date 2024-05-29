@@ -8,8 +8,8 @@ description:
   Rather than physical installations on site, the Virtual Art Trail is accessible online. Each artwork can be experienced through your phone or device as you walk through the reserves.
 gallery:
   [
-    "/src/data/showcase/images/clients/art-trail/1.jpeg",
-    "/src/data/showcase/images/clients/art-trail/2.jpeg",
+    "/src/data/portfolio/images/clients/art-trail/1.jpeg",
+    "/src/data/portfolio/images/clients/art-trail/2.jpeg",
   ]
 url: "https://art-trail.neighbourhoodarts.org.nz/"
 ---

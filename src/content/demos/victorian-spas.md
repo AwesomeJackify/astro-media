@@ -7,8 +7,8 @@ description:
   Whether you're seeking a deep, therapeutic massage massage a luxurious facial massage or a traditional Balinese oil massage for two, massage we can help. At Victorian Bali Spa, we're committed to making your visit unforgettable with our exclusive services.
 gallery:
   [
-    "/src/data/showcase/images/clients/victorian-spas/1.jpeg",
-    "/src/data/showcase/images/clients/victorian-spas/2.jpeg",
+    "/src/data/portfolio/images/clients/victorian-spas/1.jpeg",
+    "/src/data/portfolio/images/clients/victorian-spas/2.jpeg",
   ]
 url: "https://www.victorianspas.com"
 ---

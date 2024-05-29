@@ -94,5 +94,17 @@
       "question": "Why is having a Google Business listing important?",
       "answer": "Having a Google Business listing is crucial for gaining more exposure and attracting local customers. It ensures your business appears prominently in search results and on Google Maps, providing essential information such as your address, hours, and contact details. Without a listing, you miss out on valuable space on the right-hand side of search results, where customers often look for quick business information. A well-optimised Google Business listing can enhance your online presence, drive traffic to your website, and ultimately increase sales."
     }
+  ],
+  "metaData": [
+    {
+      "name": "costs-calculator",
+      "title": "Cost of Website Builders vs. Agencies",
+      "description": "Ever wondered about how much does it cost to build a website or the cost differences between website builders and agencies? Website builders offer low upfront costs and simplicity, while agencies provide custom, scalable solutions. Compare these options to find the best fit for your needs and budget."
+    },
+    {
+      "name": "resources",
+      "title": "Resources",
+      "description": "Astro Media offers a variety of tools and resources to help your business succeed. Our resources page is packed with useful tools like blog posts, calculators and more, all designed to help you make the best choice possible."
+    }
   ]
 }

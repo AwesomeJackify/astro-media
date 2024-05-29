@@ -7,16 +7,19 @@ import CostsCalculator from "~/components/CostsCalculator";
 
 import config from "~/data/config.json";
 
-const title = config.businessName + " | Cost of Website Builders vs. Agencies";
+const metaData = config.metaData.find(
+  (data: any) => data.name == "costs-calculator"
+);
 
-const description =
-  "Ever wondered about how much does it cost to build a website or the cost differences between website builders and agencies? Website builders offer low upfront costs and simplicity, while agencies provide custom, scalable solutions. Compare these options to find the best fit for your needs and budget.";
+const title = config.businessName + " | " + metaData.title;
+
+const description = metaData.description;
 ---
 
 <Layout title={title} description={description} navTop>
   <div class="w-full bg-default py-16">
     <section
-      class="mx-auto flex h-full max-w-screen-xl flex-col gap-16 py-32 px-2 max-md:py-8"
+      class="mx-auto flex h-full max-w-screen-xl flex-col gap-16 py-16 px-2 max-md:py-8"
     >
       <div class="flex flex-col items-center gap-4 text-center">
         <h1 class="font-extrabold text-9xl">
@@ -26,6 +29,9 @@ const description =
       </div>
 
       <CostsCalculator client:only="react" />
+      <a href="/blog" class="link mt-auto text-center text-sm"
+        >How do we calculate these costs?</a
+      >
     </section>
   </div>
 </Layout>

@@ -1,0 +1,46 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import CostsCalculator from "~/components/CostsCalculator";
+
+import config from "~/data/config.json";
+import Splash from "~/components/splash.astro";
+
+const title = config.businessName + " | Blog";
+
+const description =
+  "Curious about building a website? Our blog covers everything from case studies of our clients to offering insights and tips for every budget. Explore the latest trends and expert advice to make informed decisions and elevate your online presence.";
+---
+
+<Layout title={title} description={description}>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      Blog
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+    >
+    </h2>
+  </Splash>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "Curious about our case studies, the state of web development itself and more? Look no further.",
+      delimiter: " ",
+    },
+  });
+</script>

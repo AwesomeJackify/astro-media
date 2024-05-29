@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Icon } from "@iconify-icon/react";
 
 const CostsCalculator = () => {
   // config:
   //   - Cost for multiple pages
   //   - cost for design and development
   //   - cost for maintenance/hosting
-  //   - Customer support
 
   // user options:
   //   - number of pages
@@ -15,7 +15,7 @@ const CostsCalculator = () => {
 
   // output:
   //   - number of hours on your end
-  //   - how much money you would save by hiring a professional
+  //   - how much money you could save by hiring a professional
 
   const [numOfPages, setNumOfPages] = useState<number>(5);
   const [hourlyRate, setHourlyRate] = useState<number>(30);
@@ -35,6 +35,7 @@ const CostsCalculator = () => {
 
     if (numOfPages > 5) {
       baseBigAgencyCost += (numOfPages - 5) * 150;
+      baseSmallAgencyCost += (numOfPages - 5) * 30;
     }
 
     if (wantsPhotography) {
@@ -47,15 +48,18 @@ const CostsCalculator = () => {
       hours += 1;
     }
 
+    const nonLinearPages = numOfPages ** 1.3;
+
     switch (websiteType) {
       case "Personal Portfolio":
-        hours += numOfPages * 1 + 20;
+        hours += nonLinearPages * 1 + 20;
         break;
       case "Service Business":
-        hours += numOfPages * 1.5 + 40;
+        hours += nonLinearPages * 1.5 + 40;
         break;
       case "E-Commerce":
-        hours += numOfPages * 2 + 100;
+        hours += nonLinearPages * 2 + 100;
+        baseSmallAgencyCost *= 2;
         break;
       default:
         break;
@@ -91,6 +95,7 @@ const CostsCalculator = () => {
       max: 20,
       value: numOfPages,
       handleSetter: setNumOfPages,
+      tip: "Most websites have a landing, about, a few services and a contact. The more pages, the more time it takes to build.",
     },
     {
       name: "Personal hourly rate",
@@ -98,18 +103,21 @@ const CostsCalculator = () => {
       max: 100,
       value: hourlyRate,
       handleSetter: setHourlyRate,
+      tip: "How much do you value your time? The more your day job pays, the least cost-effective it is to build your own website.",
     },
     {
       name: "Photography",
       type: "checkbox",
       value: wantsPhotography,
       handleSetter: setWantsPhotography,
+      tip: "Good photography can make or break a website. If you don't have any, you might want to hire a professional.",
     },
     {
       name: "Google Business Listing",
       type: "checkbox",
       value: wantsBusinessListing,
       handleSetter: setWantsBusinessListing,
+      tip: "If you have a physical location, you might want to list it on Google Business. It's free but takes time to set up.",
     },
     {
       name: "website difficulty",
@@ -126,6 +134,7 @@ const CostsCalculator = () => {
         },
       ],
       handleSetter: setWebsiteType,
+      tip: "The more intricate the website, the chance of something going wrong increases. E-commerce websites are the most complex.",
     },
   ];
 
@@ -134,7 +143,7 @@ const CostsCalculator = () => {
   // }, [numOfPages, hourlyRate, wantsPhotography, websiteType]);
 
   return (
-    <div className="mx-auto flex w-full flex-row items-center gap-16">
+    <div className="mx-auto grid w-full grid-cols-2 items-center gap-16 max-md:grid-cols-1">
       <form className="mx-auto flex w-full flex-col items-center gap-4">
         {userOptions.map((option, index) => {
           return (
@@ -142,8 +151,14 @@ const CostsCalculator = () => {
               key={index}
               className="grid w-full grid-cols-2 items-start gap-4"
             >
-              <label className="font-medium capitalize text-2xl max-md:text-lg">
+              <label className="inline items-start justify-start gap-1 font-medium capitalize text-2xl max-md:text-lg">
                 {option.name}
+                <div
+                  className="tooltip ml-1 w-fit normal-case"
+                  data-tip={option.tip}
+                >
+                  <Icon icon="material-symbols:info" className="text-sm" />
+                </div>
               </label>
               {option.type === "number" ? (
                 <div className="flex w-full flex-col items-center gap-2">
@@ -195,10 +210,10 @@ const CostsCalculator = () => {
         <h1 className="text-2xl max-md:text-lg">
           By letting a website agency make your website...
         </h1>
-        <div className="text-xl">
+        <div className="flex flex-col gap-8 text-xl max-md:gap-4">
           {bigAgencyCostProfit > 0 ? (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              You would save
+              You could save
               <span className="font-bold text-green-500 text-6xl">
                 ${Math.round(bigAgencyCostProfit)}
               </span>
@@ -208,7 +223,7 @@ const CostsCalculator = () => {
             </p>
           ) : (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              You would lose
+              You could lose
               <span className="font-bold text-red-500 text-6xl">
                 -${Math.round(bigAgencyCostProfit) * -1}
               </span>
@@ -219,7 +234,7 @@ const CostsCalculator = () => {
           )}
           {smallAgencyCostProfit > 0 ? (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              And you would save
+              And you could save
               <span className="font-bold text-green-500 text-6xl">
                 ${Math.round(smallAgencyCostProfit)}
               </span>
@@ -229,7 +244,7 @@ const CostsCalculator = () => {
             </p>
           ) : (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              And you would lose
+              And you could lose
               <span className="font-bold text-red-500 text-6xl">
                 -${Math.round(smallAgencyCostProfit) * -1}
               </span>
