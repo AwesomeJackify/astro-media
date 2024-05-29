@@ -149,7 +149,7 @@ const CostsCalculator = () => {
           return (
             <div
               key={index}
-              className="grid w-full grid-cols-2 items-start gap-4"
+              className="grid w-full grid-cols-2 items-start gap-4 overflow-hidden max-md:grid-cols-1 max-md:place-items-center"
             >
               <label className="inline items-start justify-start gap-1 font-medium capitalize text-2xl max-md:text-lg">
                 {option.name}

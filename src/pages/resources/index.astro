@@ -24,22 +24,27 @@ const title = config.businessName + " | " + metaData.title;
     >
     </h2>
   </Splash>
-  <section class="mx-auto flex min-h-screen max-w-screen-xl flex-col py-16">
-    <a
-      href="/resources/costs-calculator"
-      class="flex items-center hover:text-primary"
-    >
-      <Icon name="mdi:calculator" class="w-24 aspect-square" />
+  <section
+    class="mx-auto grid max-w-screen-xl grid-cols-2 place-items-start py-16 align-top max-md:grid-cols-1"
+  >
+    <div class="flex w-full flex-col items-start gap-4">
+      <Icon name="mdi:calculator" class="w-32 aspect-square" />
       <div class="flex flex-col">
-        <h1 class="font-bold text-4xl">Website Costs Calculator</h1>
-        <p class="max-w-screen-md truncate text-sm">
+        <h1 class="font-bold max-md:w-32 max-md:text-xl">
+          Website Costs Calculator
+        </h1>
+        <p class="w-full text-xs">
           {
             config.metaData.find((data: any) => data.name == "costs-calculator")
               .description
           }
         </p>
       </div>
-    </a>
+      <a
+        href="/resources/costs-calculator"
+        class="btn-primary btn w-fit self-end">Check it out</a
+      >
+    </div>
   </section>
 </Layout>
 
