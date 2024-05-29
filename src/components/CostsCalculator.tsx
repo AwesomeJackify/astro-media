@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { IoMdInformationCircle } from "@react-icons/all-files/io/IoMdInformationCircle";
 
 const CostsCalculator = () => {
   // config:
@@ -155,7 +156,9 @@ const CostsCalculator = () => {
                 <div
                   className="tooltip ml-1 w-fit normal-case"
                   data-tip={option.tip}
-                ></div>
+                >
+                  <IoMdInformationCircle className="text-sm" />
+                </div>
               </label>
               {option.type === "number" ? (
                 <div className="flex w-full flex-col items-center gap-2">
