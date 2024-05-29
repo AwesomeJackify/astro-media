@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.0.2",
-    "@iconify-icon/react": "^2.1.0",
     "@iconify/tailwind": "^1.1.1",
     "@types/micromodal": "^0.3.3",
     "astro": "^3.4.3",
@@ -31,6 +30,7 @@
     "@astrojs/sitemap": "^3.1.5",
     "@fontsource/inter": "^4.5.14",
     "@iconify-json/material-symbols": "^1.1.80",
+    "@react-icons/all-files": "^4.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "caniuse-lite": "^1.0.30001616",
