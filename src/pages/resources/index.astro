@@ -1,0 +1,45 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import CalculateCosts from "~/components/CostsCalculatorr";
+
+import config from "~/data/config.json";
+import Splash from "~/components/splash.astro";
+
+const title = config.businessName + " | Best Website Design in Auckland, NZ";
+
+const description =
+  "Astro Media offers a variety of tools and resources to help your business succeed. Our resources page is packed with useful tools like calculators and more, all designed to help you make the best choice possible.";
+---
+
+<Layout title={title} description={description}>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
+    >
+      Resources
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center font-extralight text-white text-2xl"
+    >
+    </h2>
+  </Splash>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "Astro Media offers a variety of tools and resources to help your business succeed. Our resources page is packed with useful tools like calculators and more, all designed to help you make the best choice possible.",
+      delimiter: " ",
+    },
+  });
+</script>

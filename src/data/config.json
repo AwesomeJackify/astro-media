@@ -60,11 +60,6 @@
   ],
   "faqs": [
     {
-      "name": "cost",
-      "question": "How much does a website designer cost?",
-      "answer": "The cost of a website designer can vary widely based on the complexity of the project, the experience of the designer, and the specific needs of your business. We offer competitive pricing tailored to suit small businesses. We believe in transparent pricing with no hidden fees, ensuring you get the best value for your investment."
-    },
-    {
       "name": "what_is_designer",
       "question": "What is a website designer?",
       "answer": "A website designer is a professional who specialises in creating the layout, visual appearance, and usability of a website. They work on the overall look and feel of the site, ensuring it is aesthetically pleasing and user-friendly. We focus on crafting custom websites that reflect your brand and engage your audience."
@@ -75,6 +70,11 @@
       "answer": "When choosing a website designer, look for experience, a strong portfolio, and good communication skills. It's also important to find someone who understands your business goals and can tailor the website to meet your specific needs. We pride ourselves on our expertise, our ability to deliver personalised designs, and our commitment to client satisfaction."
     },
     {
+      "name": "how_long",
+      "question": "How long does it take to build a custom website?",
+      "answer": "For most service-type websites like tradies, interior designers, and restaurants, a website can typically be completed within 1-2 weeks. We focus on efficient project management and clear communication to ensure your website is delivered on time without compromising on quality."
+    },
+    {
       "name": "wix_vs_handmade",
       "question": "(Wix, Squarespace) vs. Hand-made websites",
       "answer": "While platforms like Wix and Squarespace offer convenient and cost-effective solutions, they often come with limitations in terms of customisation and functionality. Hand-made websites, like those crafted by Astro Media NZ, offer complete flexibility, scalability, and a unique design tailored to your business needs. Investing in a custom website can provide a more professional and personalised online presence, saving you the time and effort of trying to build it yourself."
@@ -83,6 +83,11 @@
       "name": "local_advantage",
       "question": "Why choose a local website designer?",
       "answer": "Choosing a local website designer, like Astro Media NZ, has several advantages. We understand the local market and can provide personalised service and support. Being in the same time zone means faster communication and more efficient project management. Plus, supporting local businesses helps strengthen the community."
+    },
+    {
+      "name": "importance_of_pictures",
+      "question": "Why are pictures so important for a website?",
+      "answer": "Pictures are crucial for creating an engaging and visually appealing website. High-quality images can significantly enhance the user experience and convey your brand's message effectively. We understand the importance of professional photos so we will come in-person to take them for you, ensuring your online presence looks polished and professional."
     },
     {
       "name": "google_business_listing",

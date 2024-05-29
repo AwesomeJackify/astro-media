@@ -1,11 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    // Alias `src` to `~`
-    "types": ["astro/client"],
-    "baseUrl": ".",
+    "types": [
+      "astro/client"
+    ],
+    "baseUrl": "/Users/jackgong/Documents/Astro Media/astro-media",
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

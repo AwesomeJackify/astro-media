@@ -9,6 +9,7 @@ const navItems: Array<NavItem> = [
   { title: "About Us", url: "/about-us" },
   { title: "Portfolio", url: "/portfolio" },
   { title: "Testimonials", url: "/testimonials" },
+  { title: "Resources", url: "/resources" },
   { title: "FAQ", url: "/faq" },
   { title: "Contact Us", url: "/contact-us" },
 ];
@@ -19,8 +20,8 @@ const { navTop } = Astro.props;
 <header
   id="page-header"
   class={`absolute ${
-    navTop ? "top-0" : "bottom-0"
-  } z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white`}
+    navTop ? "top-0 bg-default text-default" : "bottom-0 text-white"
+  } z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 `}
 >
   <a class="flex items-center gap-3 hover:!text-default" href="/">
     <h1 class="sr-only">Astro Media</h1>

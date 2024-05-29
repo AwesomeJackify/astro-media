@@ -1,0 +1,31 @@
+---
+const { resource } = Astro.params;
+
+import Layout from "~/layouts/Layout.astro";
+
+import CostsCalculator from "~/components/CostsCalculator";
+
+import config from "~/data/config.json";
+
+const title = config.businessName + " | Cost of Website Builders vs. Agencies";
+
+const description =
+  "Ever wondered about how much does it cost to build a website or the cost differences between website builders and agencies? Website builders offer low upfront costs and simplicity, while agencies provide custom, scalable solutions. Compare these options to find the best fit for your needs and budget.";
+---
+
+<Layout title={title} description={description} navTop>
+  <div class="w-full bg-default">
+    <section
+      class="mx-auto flex h-full max-w-screen-xl flex-col gap-16 py-32 px-2 max-md:py-8"
+    >
+      <div class="flex flex-col items-center gap-4 text-center">
+        <h1 class="font-extrabold text-9xl">
+          Website Builders vs Website Agency
+        </h1>
+        <h2 class="font-bold text-primary text-6xl">Calculator</h2>
+      </div>
+
+      <CostsCalculator client:only="react" />
+    </section>
+  </div>
+</Layout>
