@@ -7,12 +7,27 @@ import CostsCalculator from "~/components/CostsCalculator";
 import config from "~/data/config.json";
 import Splash from "~/components/splash.astro";
 
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
 const title = config.businessName + " | Blog";
 
 const description =
   "Curious about building a website? Our blog covers everything from case studies of our clients to offering insights and tips for every budget. Explore the latest trends and expert advice to make informed decisions and elevate your online presence.";
 
 const allBlogPosts = await getCollection("blog");
+
+const allBlogPostsWithModifiedTime = await Promise.all(
+  allBlogPosts.map(async (entry) => {
+    const { Content, remarkPluginFrontmatter } = await entry.render();
+    const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
+      .utc()
+      .format("DD MMMM YYYY");
+    return { ...entry, lastModified };
+  })
+);
 ---
 
 <Layout title={title} description={description}>
@@ -30,13 +45,15 @@ const allBlogPosts = await getCollection("blog");
 
   <section class="mx-auto flex max-w-screen-lg flex-col py-16">
     {
-      allBlogPosts.map((post) => (
+      allBlogPostsWithModifiedTime.map((post) => (
         <article class="mb-16 flex flex-col gap-4">
           <h1 class="font-bold text-4xl">{post.data.title}</h1>
+          <p class="text-gray-500">Last updated: {post.lastModified}</p>
           <p class="">{post.data.description}</p>
-          <a href={`/blog/ + post.slug`} class="btn-primary btn w-fit">
+          <a href={`/blog/${post.slug}`} class="btn-primary btn w-fit">
             View Post
           </a>
+          <div class="divider-default divider" />
         </article>
       ))
     }
