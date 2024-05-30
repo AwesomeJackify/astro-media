@@ -3,10 +3,6 @@ import Splash from "~/components/splash.astro";
 import Layout from "~/layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-import astroLogo from "~/assets/AstroMediaLogo.svg";
-import aboutUsImg1 from "~/assets/aboutUs/1.jpeg";
-import aboutUsImg2 from "~/assets/aboutUs/2.jpeg";
-
 import config from "~/data/config.json";
 
 const headshotImages = import.meta.glob<{ default: ImageMetadata }>(

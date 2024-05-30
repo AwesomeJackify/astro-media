@@ -1,6 +1,5 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import CalculateCosts from "~/components/CostsCalculatorr";
 
 import Icon from "astro-icon";
 
@@ -9,10 +8,10 @@ import Splash from "~/components/splash.astro";
 
 const metaData = config.metaData.find((data: any) => data.name == "resources");
 
-const title = config.businessName + " | " + metaData.title;
+const title = config.businessName + " | " + (metaData?.title ?? "");
 ---
 
-<Layout title={title} description={metaData.description}>
+<Layout title={title} description={metaData?.description ?? ""}>
   <Splash>
     <h1
       class="gradient-text mx-8 text-center font-extrabold tracking-tighter text-9xl sm:mx-0"
@@ -38,7 +37,7 @@ const title = config.businessName + " | " + metaData.title;
         <p class="w-full text-xs">
           {
             config.metaData.find((data: any) => data.name == "costs-calculator")
-              .description
+              ?.description ?? ""
           }
         </p>
       </div>

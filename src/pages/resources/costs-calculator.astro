@@ -3,7 +3,7 @@ const { resource } = Astro.params;
 
 import Layout from "~/layouts/Layout.astro";
 
-import CostsCalculator from "~/components/CostsCalculator";
+import ExternalCostsCalculator from "~/components/CostsCalculator";
 
 import config from "~/data/config.json";
 
@@ -11,9 +11,9 @@ const metaData = config.metaData.find(
   (data: any) => data.name == "costs-calculator"
 );
 
-const title = config.businessName + " | " + metaData.title;
+const title = config.businessName + " | " + (metaData?.title ?? "");
 
-const description = metaData.description;
+const description = metaData?.description ?? "";
 ---
 
 <Layout title={title} description={description} navTop>
@@ -28,7 +28,7 @@ const description = metaData.description;
         <h2 class="font-bold text-primary text-6xl">Calculator</h2>
       </div>
 
-      <CostsCalculator client:only="react" />
+      <ExternalCostsCalculator client:only="react" />
       <a
         href="/blog/costs-calculator"
         class="link-primary link mx-auto mt-auto w-fit text-center text-sm"
