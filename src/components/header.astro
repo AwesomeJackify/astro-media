@@ -35,7 +35,7 @@ const { navTop } = Astro.props;
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
-              <li>
+              <li class="transition hover:text-primary">
                 <a class="text-sm" href={url}>
                   {title}
                 </a>
