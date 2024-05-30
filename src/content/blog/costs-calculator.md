@@ -1,11 +1,11 @@
 ---
-title: How the costs calcualtor works
+title: How the website builder vs website agency costs calcuator works
 description: The Costs Calculator is a simple tool designed to help you estimate the time and cost involved in building a website based on your specific needs. You can input details like the number of pages, your personal hourly rate, and whether you want features like photography and Google Business listing. The calculator also lets you choose the difficulty of the website (e.g., Personal Portfolio, Service Business, E-Commerce), and then calculates the total hours you would spend and how much money you could potentially save by hiring a professional web agency instead of doing it yourself.
 ---
 
-# Website Costs Calculator
+# Website Builder vs Web Agency Costs Calculator
 
-The Website Costs Calculator is designed to estimate the time and cost required to build a website based on various user inputs. This tool is particularly useful for individuals and businesses who want to understand the effort involved in creating a website and compare it with the cost of hiring professional web design agencies.
+This calculator is designed to estimate the time and cost required to build a website based on various user inputs. This tool is particularly useful for individuals and businesses who want to understand the effort involved in creating a website and compare it with the cost of hiring professional web design agencies.
 
 <em>In the following calculations, we referenced Wix's Business plan [2] as the website builder, Small Business Business Web Designs' professional package [1] as the big web agency and Astro Media NZ as the small web dev agency.</em>
 
