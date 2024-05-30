@@ -75,7 +75,7 @@ The main purpose of this calculator is to help users:
 - **Cost Breakdown**: Professional agencies charge more upfront but handle complexity and maintenance efficiently.
 - **David vs Goliath**: Small web agencies perform much better for small to mid-sized projects, while big agencies are better suited for large-scale projects.
 
-[Try the calculator yourself to see how the costs and time estimates change based on your inputs!](http://localhost:4321/resources/costs-calculator)
+[Try the calculator yourself to see how the costs and time estimates change based on your inputs!](/resources/costs-calculator)
 
 # Sources
 
