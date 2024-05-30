@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table.signature {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      td.name {
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      td.title {
+        font-size: 16px;
+        color: #666;
+      }
+      td.contact {
+        font-size: 14px;
+      }
+      table.wrapper {
+        display: table;
+      }
+      #me {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="signature">
+      <tr class="wrapper">
+        <td>
+          <img id="me" src="https://i.imgur.com/l90766z.jpeg" alt="Me" />
+        </td>
+        <td>
+          <table>
+            <tr>
+              <td class="name">
+                Jack Gong
+                <img
+                  src="https://i.imgur.com/wfZBJLg.png"
+                  width="25px"
+                  height="25px"
+                  alt="Astro Media logo"
+                  style="margin-left: 3px"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="title">Co-founder</td>
+            </tr>
+            <tr>
+              <td class="contact">
+                Email:
+                <a href="mailto:jack.gong@astromedia.dev"
+                  >jack.gong@astromedia.dev</a
+                ><br />
+                Phone: <a href="tel:+640211088932">(+64) 021 1088-932</a><br />
+                Website: <a href="https://astromedia.dev">www.astromedia.dev</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
