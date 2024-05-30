@@ -7,7 +7,7 @@ description: The Costs Calculator is a simple tool designed to help you estimate
 
 This calculator is designed to estimate the time and cost required to build a website based on various user inputs. This tool is particularly useful for individuals and businesses who want to understand the effort involved in creating a website and compare it with the cost of hiring professional web design agencies.
 
-<em>In the following calculations, we referenced Wix's Business plan [2] as the website builder, Small Business Business Web Designs' professional package [1] as the big web agency and Astro Media NZ as the small web dev agency.</em>
+<em>In the following calculations, we referenced Wix's Business plan [2] as the website builder, Small Business Business Web Designs' professional package [1] as the big web agency and Astro Media NZ as the small web dev agency. The data used is as of May 2024.</em>
 
 ## How the Maths Works
 

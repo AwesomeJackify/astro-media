@@ -65,7 +65,7 @@ const CostsCalculator = () => {
         break;
     }
 
-    // maintainance cost in the first year
+    // maintenance cost in the first year
     baseBigAgencyCost += 1400; //https://nzdigital.co.nz/web-design-price-guide-new-zealand/
     baseSmallAgencyCost += 12 * 50;
     const userPersonalCost = hours * hourlyRate + 36 * 12;
