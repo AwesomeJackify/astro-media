@@ -1,5 +1,5 @@
 ---
-title: How the website builder vs website agency costs calcuator works
+title: How the website builder vs website agency costs calculator works
 description: The Costs Calculator is a simple tool designed to help you estimate the time and cost involved in building a website based on your specific needs. You can input details like the number of pages, your personal hourly rate, and whether you want features like photography and Google Business listing. The calculator also lets you choose the difficulty of the website (e.g., Personal Portfolio, Service Business, E-Commerce), and then calculates the total hours you would spend and how much money you could potentially save by hiring a professional web agency instead of doing it yourself.
 ---
 
@@ -38,7 +38,7 @@ The calculator starts with a base cost for both big and small web agencies.
 
 - **Personal Portfolio**: 20 base hours `numOfPages^1.3 + 20`
 - **Service Business**: 40 base hours plus `numOfPages^1.3 * 1.5 + 40`
-- **E-Commerce**: 100 base hours `numOfPages^1.3 * 2 + 100`, and doubles the small agency base cost as their team is smaller and the project is alot more work than the other website types.
+- **E-Commerce**: 100 base hours `numOfPages^1.3 * 2 + 100`, and doubles the small agency base cost as their team is smaller and the project is a lot more work than the other website types.
 
 ### Maintenance Costs
 
