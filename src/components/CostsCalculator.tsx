@@ -27,9 +27,12 @@ const CostsCalculator = () => {
   const [bigAgencyCost, setBigAgencyCost] = useState(1799);
   const [smallAgencyCost, setSmallAgencyCost] = useState(500);
 
+  const upperBigAgencyCostDiff = 2900;
+  const upperSmallAgencyCostDiff = 1500;
+
   // Calculate costs and hours
   const calculateCosts = () => {
-    let baseBigAgencyCost = 1799;
+    let baseBigAgencyCost = 599;
     let baseSmallAgencyCost = 500;
     let hours = 0;
 
@@ -85,8 +88,12 @@ const CostsCalculator = () => {
     websiteType,
   ]);
 
-  const smallAgencyCostProfit = personalCost - smallAgencyCost;
-  const bigAgencyCostProfit = personalCost - bigAgencyCost;
+  const maxSmallAgencyCostProfit = personalCost - smallAgencyCost;
+  const minSmallAgencyCostProfit =
+    personalCost - smallAgencyCost - upperSmallAgencyCostDiff;
+  const maxBigAgencyCostProfit = personalCost - bigAgencyCost;
+  const minBigAgencyCostProfit =
+    personalCost - bigAgencyCost - upperBigAgencyCostDiff;
 
   const userOptions = [
     {
@@ -217,47 +224,93 @@ const CostsCalculator = () => {
           By letting a website agency make your website...
         </h1>
         <div className="flex flex-col gap-8 text-xl max-md:gap-4">
-          {bigAgencyCostProfit > 0 ? (
+          {minBigAgencyCostProfit > 0 ? (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              You could save
+              You could save between
               <span className="font-bold text-green-500 text-6xl">
-                ${Math.round(bigAgencyCostProfit)}
+                ${Math.round(minBigAgencyCostProfit)} to $
+                {Math.round(maxBigAgencyCostProfit)}
+              </span>
+              <span className="italic text-base max-md:text-xs">
+                *with a big agency
+              </span>
+            </p>
+          ) : maxBigAgencyCostProfit < 0 ? (
+            <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
+              You could lose between
+              <span className="font-bold text-red-500 text-6xl">
+                -${Math.round(minBigAgencyCostProfit * -1)} to -$
+                {Math.round(maxBigAgencyCostProfit * -1)}
               </span>
               <span className="italic text-base max-md:text-xs">
                 *with a big agency
               </span>
             </p>
           ) : (
-            <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              You could lose
-              <span className="font-bold text-red-500 text-6xl">
-                -${Math.round(bigAgencyCostProfit) * -1}
-              </span>
+            <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
+              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-4">
+                <div className="flex h-full flex-col justify-end">
+                  And you could lose up to
+                  <span className="font-bold text-red-500 text-6xl">
+                    -${Math.round(minBigAgencyCostProfit) * -1}
+                  </span>
+                </div>
+                <div className="flex h-full flex-col justify-between">
+                  Or save up to
+                  <span className="font-bold text-green-500 text-6xl">
+                    ${Math.round(maxBigAgencyCostProfit)}
+                  </span>
+                </div>
+              </div>
+
               <span className="italic text-base max-md:text-xs">
-                *with a big agency
+                *with a big web agency
               </span>
-            </p>
+            </div>
           )}
-          {smallAgencyCostProfit > 0 ? (
+          {minSmallAgencyCostProfit > 0 ? (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              And you could save
+              And you could save between
               <span className="font-bold text-green-500 text-6xl">
-                ${Math.round(smallAgencyCostProfit)}
+                ${Math.round(minSmallAgencyCostProfit)} to $
+                {Math.round(maxSmallAgencyCostProfit)}
               </span>
               <span className="italic text-base  max-md:text-xs">
                 *with a small agency
               </span>
             </p>
-          ) : (
-            <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              And you could lose
+          ) : maxSmallAgencyCostProfit < 0 ? (
+            <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
+              And you could lose between
               <span className="font-bold text-red-500 text-6xl">
-                -${Math.round(smallAgencyCostProfit) * -1}
+                -${Math.round(minSmallAgencyCostProfit) * -1} to -$
+                {Math.round(maxSmallAgencyCostProfit) * -1}
               </span>
               <span className="italic text-base  max-md:text-xs">
+                *with a small web agency
+              </span>
+            </div>
+          ) : (
+            <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
+              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-4">
+                <div className="flex h-full flex-col justify-between">
+                  And you could lose up to
+                  <span className="font-bold text-red-500 text-6xl">
+                    ${Math.round(minSmallAgencyCostProfit)}
+                  </span>
+                </div>
+                <div className="flex h-full flex-col justify-between">
+                  Or save up to
+                  <span className="font-bold text-green-500 text-6xl">
+                    ${Math.round(maxSmallAgencyCostProfit)}
+                  </span>
+                </div>
+              </div>
+
+              <span className="italic text-base max-md:text-xs">
                 *with a small agency
               </span>
-            </p>
+            </div>
           )}
         </div>
         <h1 className="mx-auto w-fit  bg-primary p-4 text-center font-extrabold italic text-2xl max-md:p-2 max-md:text-lg">

@@ -7,7 +7,7 @@ description: The Costs Calculator is a simple tool designed to help you estimate
 
 This calculator is designed to estimate the time and cost required to build a website based on various user inputs. This tool is particularly useful for individuals and businesses who want to understand the effort involved in creating a website and compare it with the cost of hiring professional web design agencies.
 
-<em>In the following calculations, we referenced Wix's Business plan [2] as the website builder, Small Business Business Web Designs' professional package [1] as the big web agency and Astro Media NZ as the small web dev agency. The data used is as of May 2024.</em>
+<em>In the following calculations, we referenced Wix's Business plan [2] as the website builder, Small Business Business Web Designs [1] as the big web agency and data from Money Hub as the small web dev agency [3]. The data used is as of May 2024.</em>
 
 ## How the Maths Works
 
@@ -15,12 +15,12 @@ This calculator is designed to estimate the time and cost required to build a we
 
 The calculator starts with a base cost for both big and small web agencies.
 
-- **Big Agency Base Cost**: $1799
-- **Small Agency Base Cost**: $500
+- **Big Agency Base Cost**: $599 - $3499
+- **Small Agency Base Cost**: $500 - $2000
 
 ### Page Count
 
-- **Additional Costs**: If the number of pages exceeds 5, each additional page costs $150 for a big agency and $30 for a small agency.
+- **Additional Costs**: If the number of pages exceeds 8 (from SBWD's professional package as a reference), each additional page costs $150 for a big agency and $30 for a small agency.
 - **Non-Linear Increase for**: The complexity increases non-linearly as the number of pages increases, using the formula `numOfPages^1.3`.
 
 <em>Tip: As more pages are added to a website, non-technical users often face increased challenges like maintaining consistency, updating links and navigation, and integrating new features. These tasks become more complex over time, requiring more thought, testing, and troubleshooting. A non-linear model reflects how fatigue and errors increase as projects grow larger.</em>
@@ -81,3 +81,4 @@ The main purpose of this calculator is to help users:
 
 1. [Small Business Web Designs Pricing](https://www.smallbusinesswebdesigns.co.nz/pricing.html)
 2. [Wix Pricing](https://www.wix.com/plans)
+3. [MoneyHub](https://www.moneyhub.co.nz/auckland-web-designers.html)

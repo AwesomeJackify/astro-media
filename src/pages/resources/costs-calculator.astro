@@ -28,9 +28,8 @@ const description = metaData?.description ?? "";
         <h2 class="font-bold text-primary text-6xl">Calculator</h2>
       </div>
 
-      <div class="max-md:h-96">
-        <ExternalCostsCalculator client:only="react" />
-      </div>
+      <ExternalCostsCalculator client:only="react" />
+
       <a
         href="/blog/costs-calculator"
         class="link-primary link mx-auto mt-auto w-fit text-center text-sm"
