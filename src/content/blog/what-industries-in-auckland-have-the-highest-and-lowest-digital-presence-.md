@@ -1,6 +1,6 @@
 ---
 title: What Industries in Auckland Have the Highest and Lowest Digital Presence?
-description: Identify which sectors in Auckland have successfully adopted digital practices and which ones are lagging behind, particularly in website development and design. This analysis highlights the disparities in digital adoption across different industries, revealing opportunities for targeted support and improvement.
+description: Today we will identify which sectors in Auckland have successfully adopted digital practices and which ones are lagging behind, particularly in website development and design. This analysis highlights the disparities in digital adoption across different industries, revealing opportunities for targeted support and improvement.
 ---
 
 # 🌐 What Industries in Auckland Have the Highest and Lowest Digital Presence?
