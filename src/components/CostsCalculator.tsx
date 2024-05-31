@@ -228,7 +228,8 @@ const CostsCalculator = () => {
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               You could save between
               <span className="font-bold text-green-500 text-6xl">
-                ${Math.round(minBigAgencyCostProfit)} to $
+                ${Math.round(minBigAgencyCostProfit)}{" "}
+                <span className="text-default">-</span> $
                 {Math.round(maxBigAgencyCostProfit)}
               </span>
               <span className="italic text-base max-md:text-xs">
@@ -239,7 +240,8 @@ const CostsCalculator = () => {
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               You could lose between
               <span className="font-bold text-red-500 text-6xl">
-                -${Math.round(minBigAgencyCostProfit * -1)} to -$
+                -${Math.round(minBigAgencyCostProfit * -1)}{" "}
+                <span className="text-default">-</span> -$
                 {Math.round(maxBigAgencyCostProfit * -1)}
               </span>
               <span className="italic text-base max-md:text-xs">
@@ -248,7 +250,7 @@ const CostsCalculator = () => {
             </p>
           ) : (
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-4">
+              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-2">
                 <div className="flex h-full flex-col justify-end">
                   And you could lose up to
                   <span className="font-bold text-red-500 text-6xl">
@@ -272,7 +274,8 @@ const CostsCalculator = () => {
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               And you could save between
               <span className="font-bold text-green-500 text-6xl">
-                ${Math.round(minSmallAgencyCostProfit)} to $
+                ${Math.round(minSmallAgencyCostProfit)}{" "}
+                <span className="text-default">-</span> $
                 {Math.round(maxSmallAgencyCostProfit)}
               </span>
               <span className="italic text-base  max-md:text-xs">
@@ -283,7 +286,8 @@ const CostsCalculator = () => {
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               And you could lose between
               <span className="font-bold text-red-500 text-6xl">
-                -${Math.round(minSmallAgencyCostProfit) * -1} to -$
+                -${Math.round(minSmallAgencyCostProfit) * -1}{" "}
+                <span className="text-default">-</span> -$
                 {Math.round(maxSmallAgencyCostProfit) * -1}
               </span>
               <span className="italic text-base  max-md:text-xs">
@@ -292,7 +296,7 @@ const CostsCalculator = () => {
             </div>
           ) : (
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-4">
+              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-2">
                 <div className="flex h-full flex-col justify-between">
                   And you could lose up to
                   <span className="font-bold text-red-500 text-6xl">
