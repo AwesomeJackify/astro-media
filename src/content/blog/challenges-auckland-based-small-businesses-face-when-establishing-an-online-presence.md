@@ -1,6 +1,6 @@
 ---
 title: Challenges Auckland-Based Small Businesses Face When Establishing an Online Presence
-description: Examine the challenges Auckland-based small businesses face when trying to establish an online presence, such as time constraints, budget limitations, and lack of technical expertise.
+description: Examine the challenges Auckland-based small businesses face when trying to establish an online presence, such as time constraints, budget limitations, and lack of technical expertise. These barriers hinder many SMEs from fully leveraging the benefits of digital platforms, impacting their growth and competitiveness in the market.
 ---
 
 # 🚧 Challenges Auckland-Based Small Businesses Face When Establishing an Online Presence
