@@ -233,7 +233,7 @@ const CostsCalculator = () => {
                 {Math.round(maxBigAgencyCostProfit)}
               </span>
               <span className="italic text-base max-md:text-xs">
-                *with a big agency
+                *with a big web agency
               </span>
             </p>
           ) : maxBigAgencyCostProfit < 0 ? (
@@ -245,7 +245,7 @@ const CostsCalculator = () => {
                 {Math.round(maxBigAgencyCostProfit * -1)}
               </span>
               <span className="italic text-base max-md:text-xs">
-                *with a big agency
+                *with a big web agency
               </span>
             </p>
           ) : (
@@ -279,7 +279,7 @@ const CostsCalculator = () => {
                 {Math.round(maxSmallAgencyCostProfit)}
               </span>
               <span className="italic text-base  max-md:text-xs">
-                *with a small agency
+                *with a small web agency
               </span>
             </p>
           ) : maxSmallAgencyCostProfit < 0 ? (
@@ -312,14 +312,19 @@ const CostsCalculator = () => {
               </div>
 
               <span className="italic text-base max-md:text-xs">
-                *with a small agency
+                *with a small web agency
               </span>
             </div>
           )}
         </div>
-        <h1 className="mx-auto w-fit  bg-primary p-4 text-center font-extrabold italic text-2xl max-md:p-2 max-md:text-lg">
-          In the first year
-        </h1>
+        <div className="flex flex-col gap-2">
+          <h1 className="mx-auto w-fit  bg-primary p-4 text-center font-extrabold italic text-2xl max-md:p-2 max-md:text-lg">
+            In the first year
+          </h1>
+          <p className="italic opacity-50 text-xs">
+            *Numbers are estimates only
+          </p>
+        </div>
       </div>
     </div>
   );
