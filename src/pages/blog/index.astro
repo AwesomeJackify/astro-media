@@ -22,9 +22,14 @@ const allBlogPostsWithModifiedTime = await Promise.all(
     const { Content, remarkPluginFrontmatter } = await entry.render();
     const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
       .utc()
-      .format("DD MMMM YYYY");
+      .format("DD MMMM YYYY HH:mm");
     return { ...entry, lastModified };
   })
+);
+
+// Sort the blog posts by earliest lastModified date first
+allBlogPostsWithModifiedTime.sort((a, b) =>
+  dayjs(b.lastModified).isBefore(dayjs(a.lastModified)) ? -1 : 1
 );
 ---
 
