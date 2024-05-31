@@ -22,7 +22,7 @@ const allBlogPostsWithModifiedTime = await Promise.all(
     const { Content, remarkPluginFrontmatter } = await entry.render();
     const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
       .utc()
-      .format("DD MMMM YYYY HH:mm");
+      .format("DD MMMM YYYY");
     return { ...entry, lastModified };
   })
 );
