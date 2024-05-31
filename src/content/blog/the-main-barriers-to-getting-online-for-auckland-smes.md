@@ -1,6 +1,6 @@
 ---
 title: The Main Barriers to Getting Online for Auckland SMEs
-description: Discuss the percentage of SMEs in New Zealand without an online presence and the reasons behind this trend. Understanding these barriers, such as time constraints, budget limitations, and lack of technical expertise, is crucial to supporting Auckland small businesses in their digital transformation journey.
+description: The percentage of SMEs in New Zealand without an online presence is interesting so lets see what are the reasons behind this trend. Understanding these barriers, such as time constraints, budget limitations, and lack of technical expertise, is crucial to supporting Auckland small businesses in their digital transformation journey.
 ---
 
 # 📉 The Main Barriers to Getting Online for Auckland SMEs
