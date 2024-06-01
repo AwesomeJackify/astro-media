@@ -12,7 +12,9 @@ const sites = await getShowcase();
     <span class="text-primary">Explore</span> what's possible and get{" "}
     <span class="text-primary">inspired</span>.
   </Fragment>
-  <Macbook latestCookup={sites[0]} />
+  <div class="flex items-center justify-center max-md:h-96">
+    <Macbook latestCookup={sites[0]} />
+  </div>
   <div class="flex max-w-6xl flex-col gap-4 space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {sites.slice(1, 4).map((site) => <ShowcaseCard site={site} />)}
