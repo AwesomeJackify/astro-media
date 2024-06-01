@@ -1,7 +1,7 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 import config from "~/data/config.json";
 import Splash from "~/components/splash.astro";
@@ -29,7 +29,7 @@ const title = config.businessName + " | " + (metaData?.title ?? "");
     <div
       class="flex w-full flex-col items-start gap-4 rounded-2xl border-2 border-default p-8"
     >
-      <Icon name="mdi:calculator" class="w-32 aspect-square" />
+      <Icon name="mdi:calculator" class="text-8xl" />
       <div class="flex flex-col gap-2">
         <h1 class="font-bold text-2xl max-md:text-xl">
           Website Builder vs Website Agency Calculator
