@@ -249,26 +249,17 @@ const CostsCalculator = () => {
               </span>
             </p>
           ) : (
-            <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-2">
-                <div className="flex h-full flex-col justify-end">
-                  And you could lose up to
-                  <span className="font-bold text-red-500 text-6xl">
-                    -${Math.round(minBigAgencyCostProfit) * -1}
-                  </span>
-                </div>
-                <div className="flex h-full flex-col justify-between">
-                  Or save up to
-                  <span className="font-bold text-green-500 text-6xl">
-                    ${Math.round(maxBigAgencyCostProfit)}
-                  </span>
-                </div>
-              </div>
-
+            <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
+              You could lose/save between
+              <span className="font-bold  text-6xl">
+                <span className="text-red-500">-${Math.round(minBigAgencyCostProfit * -1)}</span>{" "}
+                <span className="text-default">-</span>
+                <span className="text-green-500">${Math.round(maxBigAgencyCostProfit)}</span>
+              </span>
               <span className="italic text-base max-md:text-xs">
                 *with a big web agency
               </span>
-            </div>
+            </p>
           )}
           {minSmallAgencyCostProfit > 0 ? (
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
@@ -278,7 +269,7 @@ const CostsCalculator = () => {
                 <span className="text-default">-</span> $
                 {Math.round(maxSmallAgencyCostProfit)}
               </span>
-              <span className="italic text-base  max-md:text-xs">
+              <span className="italic text-base max-md:text-xs">
                 *with a small web agency
               </span>
             </p>
@@ -286,31 +277,22 @@ const CostsCalculator = () => {
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               And you could lose between
               <span className="font-bold text-red-500 text-6xl">
-                -${Math.round(minSmallAgencyCostProfit) * -1}{" "}
+                -${Math.round(minSmallAgencyCostProfit * -1)}{" "}
                 <span className="text-default">-</span> -$
-                {Math.round(maxSmallAgencyCostProfit) * -1}
+                {Math.round(maxSmallAgencyCostProfit * -1)}
               </span>
-              <span className="italic text-base  max-md:text-xs">
+              <span className="italic text-base max-md:text-xs">
                 *with a small web agency
               </span>
             </div>
           ) : (
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
-              <div className="flex flex-row gap-8 max-md:flex-col max-md:gap-2">
-                <div className="flex h-full flex-col justify-between">
-                  And you could lose up to
-                  <span className="font-bold text-red-500 text-6xl">
-                    ${Math.round(minSmallAgencyCostProfit)}
-                  </span>
-                </div>
-                <div className="flex h-full flex-col justify-between">
-                  Or save up to
-                  <span className="font-bold text-green-500 text-6xl">
-                    ${Math.round(maxSmallAgencyCostProfit)}
-                  </span>
-                </div>
-              </div>
-
+              And you could lose/save between
+              <span className="font-bold text-red-500 text-6xl">
+                <span className="text-red-500">-${Math.round(minSmallAgencyCostProfit * -1)}</span>{" "}
+                <span className="text-default">-</span>
+                <span className="text-green-500">${Math.round(maxSmallAgencyCostProfit)}</span>
+              </span>
               <span className="italic text-base max-md:text-xs">
                 *with a small web agency
               </span>
@@ -318,7 +300,7 @@ const CostsCalculator = () => {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="mx-auto w-fit  bg-primary p-4 text-center font-extrabold italic text-2xl max-md:p-2 max-md:text-lg">
+          <h1 className="mx-auto w-fit bg-primary p-4 text-center font-extrabold italic text-2xl max-md:p-2 max-md:text-lg">
             In the first year
           </h1>
           <p className="italic opacity-50 text-xs">
@@ -326,6 +308,7 @@ const CostsCalculator = () => {
           </p>
         </div>
       </div>
+
     </div>
   );
 };
