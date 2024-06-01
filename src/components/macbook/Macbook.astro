@@ -61,9 +61,10 @@ const { latestCookup } = Astro.props;
     scaleY: 3,
     scaleX: 2,
     scrollTrigger: {
-      trigger: "#baseArea",
+      trigger: "#macbookTrigger",
       start: "top center",
-      end: "center center",
+      end: "bottom center",
+      markers: true,
       scrub: true,
     },
   });
