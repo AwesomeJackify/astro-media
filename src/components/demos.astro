@@ -2,6 +2,7 @@
 import ContentSection from "~/components/content-section.astro";
 import ShowcaseCard from "~/components/showcase-card.astro";
 import { getShowcase } from "~/data/portfolio";
+import Macbook from "~/components/macbook/Macbook.astro";
 
 const sites = await getShowcase();
 ---
@@ -11,11 +12,12 @@ const sites = await getShowcase();
     <span class="text-primary">Explore</span> what's possible and get{" "}
     <span class="text-primary">inspired</span>.
   </Fragment>
+  <Macbook latestCookup={sites[0]} />
   <div class="flex max-w-6xl flex-col gap-4 space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {sites.slice(0, 3).map((site) => <ShowcaseCard site={site} />)}
+      {sites.slice(1, 4).map((site) => <ShowcaseCard site={site} />)}
     </div>
-    <a href="/portfolio" class="link mx-auto underline text-2xl"
+    <a href="/portfolio" class="link-primary link mx-auto text-2xl"
       >See More Of Our Work</a
     >
   </div>

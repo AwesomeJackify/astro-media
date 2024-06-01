@@ -1,0 +1,31 @@
+---
+import astroMediaLogoImg from "@assets/images/astroMediaLogo.svg";
+import { Image } from "astro:assets";
+
+import ShowcaseCard from "~/components/showcase-card.astro";
+
+const { latestCookup } = Astro.props;
+---
+
+<div class="relative border-black">
+  <div
+    style={{
+      transform: "perspective(800px) rotateX(-30deg) translateZ(0px)",
+      transformOrigin: "bottom",
+    }}
+    class="relative h-[16rem] w-[32rem] rounded-2xl bg-[#010101] py-4"
+  >
+    <div
+      id="portfolioImg"
+      class="flex flex-col"
+      style={{
+        transform: "perspective(800px) translateZ(0px)",
+        transformOrigin: "bottom",
+      }}
+    >
+      <div class="bg-white">
+        <ShowcaseCard site={latestCookup} />
+      </div>
+    </div>
+  </div>
+</div>

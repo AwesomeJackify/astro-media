@@ -1,0 +1,363 @@
+---
+import Row from "./Row.astro";
+import KBtn from "./KBtn.astro";
+import OptionKey from "./OptionKey.astro";
+
+import { Icon } from "astro-icon/components";
+---
+
+<div class="mx-1 h-full rounded-md bg-[#050505] p-1 text-[1px]">
+  {/* First Row */}
+  <Row>
+    <KBtn
+      className="w-10 items-end justify-start pl-[4px] pb-[2px]"
+      childrenClassName="items-start"
+    >
+      esc
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:brightness-down" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F1</span>
+    </KBtn>
+
+    <KBtn>
+      <Icon name="tabler:brightness-up" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F2</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:table" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F3</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:search" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F4</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:microphone" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F5</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:moon" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F6</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:player-track-prev" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F7</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:player-skip-forward" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F8</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:player-track-next" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F8</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:volume-3" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F10</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:volume-2" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F11</span>
+    </KBtn>
+    <KBtn>
+      <Icon name="tabler:volume" class="h-[6px] w-[6px]" />
+      <span class="mt-1 inline-block">F12</span>
+    </KBtn>
+    <KBtn>
+      <div
+        class="from-20% via-50% to-95% h-4 w-4 rounded-full bg-gradient-to-b from-neutral-900 via-black to-neutral-900 p-px"
+      >
+        <div class="h-full w-full rounded-full bg-black"></div>
+      </div>
+    </KBtn>
+  </Row>
+
+  {/* Second row */}
+  <Row>
+    <KBtn>
+      <span class="block">~</span>
+      <span class="mt-1 block">`</span>
+    </KBtn>
+
+    <KBtn>
+      <span class="block">!</span>
+      <span class="block">1</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">@</span>
+      <span class="block">2</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">#</span>
+      <span class="block">3</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">$</span>
+      <span class="block">4</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">%</span>
+      <span class="block">5</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">^</span>
+      <span class="block">6</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">&</span>
+      <span class="block">7</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">*</span>
+      <span class="block">8</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">(</span>
+      <span class="block">9</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">)</span>
+      <span class="block">0</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">&mdash;</span>
+      <span class="block">_</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">+</span>
+      <span class="block"> =</span>
+    </KBtn>
+    <KBtn
+      className="w-10 items-end justify-end pr-[4px] pb-[2px]"
+      childrenClassName="items-end"
+    >
+      delete
+    </KBtn>
+  </Row>
+
+  {/* Third row */}
+  <Row>
+    <KBtn
+      className="w-10 items-end justify-start pl-[4px] pb-[2px]"
+      childrenClassName="items-start"
+    >
+      tab
+    </KBtn>
+    <KBtn>
+      <span class="block">Q</span>
+    </KBtn>
+
+    <KBtn>
+      <span class="block">W</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">E</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">R</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">T</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">Y</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">U</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">I</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">O</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">P</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">{`{`}</span>
+      <span class="block">{`[`}</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">{`}`}</span>
+      <span class="block">{`]`}</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">{`|`}</span>
+      <span class="block">\</span>
+    </KBtn>
+  </Row>
+
+  {/* Fourth Row */}
+  <Row>
+    <KBtn
+      className="w-[2.8rem] items-end justify-start pl-[4px] pb-[2px]"
+      childrenClassName="items-start"
+    >
+      caps lock
+    </KBtn>
+    <KBtn>
+      <span class="block">A</span>
+    </KBtn>
+
+    <KBtn>
+      <span class="block">S</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">D</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">F</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">G</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">H</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">J</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">K</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">L</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">:</span>
+      <span class="block">;</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">"</span>
+      <span class="block">'</span>
+    </KBtn>
+    <KBtn
+      className="w-[2.85rem] items-end justify-end pr-[4px] pb-[2px]"
+      childrenClassName="items-end"
+    >
+      return
+    </KBtn>
+  </Row>
+
+  {/* Fifth Row */}
+  <Row>
+    <KBtn
+      className="w-[3.65rem] items-end justify-start pl-[4px] pb-[2px]"
+      childrenClassName="items-start"
+    >
+      shift
+    </KBtn>
+    <KBtn>
+      <span class="block">Z</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">X</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">C</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">V</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">B</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">N</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">M</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">{`<`}</span>
+      <span class="block">{`,`}</span>
+    </KBtn>
+    <KBtn>
+      <span class="block">{`>`}</span>
+      <span class="block">{`.`}</span>
+    </KBtn>{" "}
+    <KBtn>
+      <span class="block">{`?`}</span>
+      <span class="block">{`/`}</span>
+    </KBtn>
+    <KBtn
+      className="w-[3.65rem] items-end justify-end pr-[4px] pb-[2px]"
+      childrenClassName="items-end"
+    >
+      shift
+    </KBtn>
+  </Row>
+
+  {/* sixth Row */}
+  <Row>
+    <KBtn class="" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-end pr-1">
+        <span class="block">fn</span>
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <Icon name="tabler:world" class="text-[6px]" />
+      </div>
+    </KBtn>
+    <KBtn class="" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-end pr-1">
+        <Icon name="tabler:chevron-up" class="text-[6px]" />
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <span class="block">control</span>
+      </div>
+    </KBtn>
+    <KBtn class="" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-end pr-1">
+        <OptionKey />
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <span class="block">option</span>
+      </div>
+    </KBtn>
+    <KBtn className="w-8" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-end pr-1">
+        <Icon name="tabler:command" class="text-[6px]" />
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <span class="block">command</span>
+      </div>
+    </KBtn>
+    <KBtn className="w-[8.2rem]" />
+    <KBtn className="w-8" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-start pl-1">
+        <Icon name="tabler:command" class="text-[6px]" />
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <span class="block">command</span>
+      </div>
+    </KBtn>
+    <KBtn className="" childrenClassName="h-full justify-between py-[4px]">
+      <div class="flex w-full justify-start pl-1">
+        <OptionKey />
+      </div>
+      <div class="flex w-full justify-start pl-1">
+        <span class="block">option</span>
+      </div>
+    </KBtn>
+    <div
+      class="mt-[2px] flex h-6 w-[4.9rem] flex-col items-center justify-end rounded-[4px] p-[0.5px]"
+    >
+      <KBtn className="w-6 h-3">
+        <Icon name="tabler:caret-up" class="text-[6px]" />
+      </KBtn>
+      <div class="flex">
+        <KBtn className="w-6 h-3">
+          <Icon name="tabler:caret-left" class="text-[6px]" />
+        </KBtn>
+        <KBtn className="w-6 h-3">
+          <Icon name="tabler:caret-down" class="text-[6px]" />
+        </KBtn>
+        <KBtn className="w-6 h-3">
+          <Icon name="tabler:caret-right" class="text-[6px]" />
+        </KBtn>
+      </div>
+    </div>
+  </Row>
+</div>

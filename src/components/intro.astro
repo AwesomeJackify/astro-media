@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import ContentSection from "~/components/content-section.astro";
 import quoteLogo from "../assets/business-govt-nz.png";
@@ -99,9 +99,9 @@ import config from "~/data/config.json";
           style="min-height: 300px;"
         >
           <div
-            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary p-3 text-primary"
           >
-            <Icon name="mdi:code-braces-box" />
+            <Icon name="mdi:code-braces-box" class="text-2xl" />
           </div>
           <h1 class="mb-4 text-center font-extrabold text-2xl">
             Custom Websites
@@ -117,9 +117,9 @@ import config from "~/data/config.json";
           style="min-height: 300px;"
         >
           <div
-            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary p-3 text-primary"
           >
-            <Icon name="mdi:search-web" />
+            <Icon name="mdi:search-web" class="text-2xl" />
           </div>
           <h1 class="mb-4 text-center font-extrabold text-2xl">Social Media</h1>
           <p class="text-center">
@@ -135,9 +135,9 @@ import config from "~/data/config.json";
           style="min-height: 300px;"
         >
           <div
-            class="h-16 w-16 rounded-full border-2 border-primary p-3 text-primary"
+            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary p-3 text-primary"
           >
-            <Icon name="mdi:account" />
+            <Icon name="mdi:account" class="text-2xl" />
           </div>
           <h1 class="mb-4 text-center font-extrabold text-2xl">
             Constant Support

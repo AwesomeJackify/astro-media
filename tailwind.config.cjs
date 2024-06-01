@@ -26,9 +26,9 @@ module.exports = {
       },
     },
   },
-  corePlugins: {
-    fontSize: false,
-  },
+  // corePlugins: {
+  //   fontSize: false,
+  // },
   daisyui: {
     themes: [
       {

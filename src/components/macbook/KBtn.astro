@@ -1,0 +1,32 @@
+---
+const { className, childrenClassName, backlit = true } = Astro.props;
+import { cn } from "src/utils/cn";
+---
+
+<div
+  class={cn(
+    "p-[0.5px] rounded-[4px]",
+    backlit && "bg-white/[0.2] shadow-xl shadow-white"
+  )}
+>
+  <div
+    class={cn(
+      "h-6 w-6 bg-[#0A090D] rounded-[3.5px] flex items-center justify-center",
+      className
+    )}
+    style={{
+      boxShadow:
+        "0px -0.5px 2px 0 #0D0D0F inset, -0.5px 0px 2px 0 #0D0D0F inset",
+    }}
+  >
+    <div
+      class={cn(
+        "text-neutral-200 text-[5px] w-full flex justify-center items-center flex-col",
+        childrenClassName,
+        backlit && "text-white"
+      )}
+    >
+      <slot />
+    </div>
+  </div>
+</div>
