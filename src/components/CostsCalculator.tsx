@@ -252,9 +252,13 @@ const CostsCalculator = () => {
             <p className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               You could lose/save between
               <span className="font-bold  text-6xl">
-                <span className="text-red-500">-${Math.round(minBigAgencyCostProfit * -1)}</span>{" "}
-                <span className="text-default">-</span>
-                <span className="text-green-500">${Math.round(maxBigAgencyCostProfit)}</span>
+                <span className="text-red-500">
+                  -${Math.round(minBigAgencyCostProfit * -1)}
+                </span>{" "}
+                <span className="text-default">-</span>{" "}
+                <span className="text-green-500">
+                  ${Math.round(maxBigAgencyCostProfit)}
+                </span>
               </span>
               <span className="italic text-base max-md:text-xs">
                 *with a big web agency
@@ -289,9 +293,13 @@ const CostsCalculator = () => {
             <div className="flex w-full flex-col items-center gap-4 max-md:gap-2">
               And you could lose/save between
               <span className="font-bold text-red-500 text-6xl">
-                <span className="text-red-500">-${Math.round(minSmallAgencyCostProfit * -1)}</span>{" "}
-                <span className="text-default">-</span>
-                <span className="text-green-500">${Math.round(maxSmallAgencyCostProfit)}</span>
+                <span className="text-red-500">
+                  -${Math.round(minSmallAgencyCostProfit * -1)}
+                </span>{" "}
+                <span className="text-default">-</span>{" "}
+                <span className="text-green-500">
+                  ${Math.round(maxSmallAgencyCostProfit)}
+                </span>
               </span>
               <span className="italic text-base max-md:text-xs">
                 *with a small web agency
@@ -308,7 +316,6 @@ const CostsCalculator = () => {
           </p>
         </div>
       </div>
-
     </div>
   );
 };
