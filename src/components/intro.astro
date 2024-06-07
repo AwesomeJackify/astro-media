@@ -38,18 +38,23 @@ import config from "~/data/config.json";
   </ContentSection>
   <div class="mt-32 flex flex-col items-center sm:mx-16 xl:mx-32">
     <div
-      class="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-4 max-md:grid-cols-1"
+      class="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-4 overflow-hidden rounded-2xl max-md:grid-cols-1"
     >
-      <Image
-        src={jack}
-        class="rounded-2xl bg-default w-full h-full object-cover"
-        alt=" Picture of co-founder Jack Gong"
-      />
-      <Image
-        src={otis}
-        class="rounded-2xl bg-default w-full h-full object-cover"
-        alt="Picture of co-founder Otis Wales"
-      />
+      <div class="flex h-[500px] w-full items-center">
+        <Image
+          src={jack}
+          class="rounded-2xl bg-default w-full h-full object-cover object-center"
+          alt=" Picture of co-founder Jack Gong"
+        />
+      </div>
+
+      <div class="flex h-[500px] w-full items-center">
+        <Image
+          src={otis}
+          class="rounded-2xl bg-default w-full h-full object-cover object-center"
+          alt=" Picture of co-founder Jack Gong"
+        />
+      </div>
     </div>
     <p class="mt-8 italic">
       Founders <a href="https://www.linkedin.com/in/jack-gong/">Jack Gong</a> & <a
