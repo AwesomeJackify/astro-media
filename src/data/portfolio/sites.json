@@ -1,5 +1,10 @@
 [
   {
+    "title": "Thor and Co Building",
+    "image": "./images/sites/thor.png",
+    "url": "/portfolio/thor"
+  },
+  {
     "title": "Victorian Spas",
     "image": "./images/sites/victorian-spas.png",
     "url": "/portfolio/victorian-spas"

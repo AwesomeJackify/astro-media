@@ -13,6 +13,7 @@ export function getStaticPaths() {
     { params: { demo: "savante-design" } },
     { params: { demo: "ataahi-fitness" } },
     { params: { demo: "victorian-spas" } },
+    { params: { demo: "thor" } },
   ];
 }
 
@@ -53,7 +54,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
       "/src/data/portfolio/images/sites/" + currentDemoEntry.slug + ".png"
     ]()}
     alt={data.title}
-    class="w-full object-contain max-md:hidden"
+    class="w-full object-contain max-md:hidden pt-16"
   />
 
   <section class="flex flex-col bg-default py-16 px-2 max-md:pt-24">
@@ -110,7 +111,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
           </div>
         ) : (
           <div class="flex flex-col gap-8 md:hidden">
-            <h2 class="font-light underline text-4xl">Gallery</h2>
+            <h2 class="font-light text-4xl">Gallery</h2>
             <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1 max-md:gap-4">
               <Image
                 src={heroImages[
