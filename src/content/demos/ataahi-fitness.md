@@ -13,5 +13,5 @@ gallery:
     "/src/data/portfolio/images/clients/ataahi-fitness/1.jpeg",
     "/src/data/portfolio/images/clients/ataahi-fitness/2.jpeg",
   ]
-url: "polite-souffle-592a01.netlify.app"
+url: "http://polite-souffle-592a01.netlify.app"
 ---
