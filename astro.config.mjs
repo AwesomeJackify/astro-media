@@ -12,10 +12,10 @@ export default defineConfig({
   integrations: [tailwind(), sitemap(), react(), icon()],
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ["svgo"],
+    },
   },
   markdown: {
-    remarkPlugins: [remarkModifiedTime]
-  }
+    remarkPlugins: [remarkModifiedTime],
+  },
 });
