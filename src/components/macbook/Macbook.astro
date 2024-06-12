@@ -46,25 +46,3 @@ const { latestCookup } = Astro.props;
     </div>
   </div>
 </div>
-
-<script>
-  import gsap from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const macbookTimeline = gsap.timeline();
-
-  macbookTimeline.to("#portfolioImg", {
-    rotateX: "30deg",
-    translateY: "150%",
-    scaleY: 3,
-    scaleX: 2,
-    scrollTrigger: {
-      trigger: "#macbookTrigger",
-      start: "top center",
-      end: "bottom center",
-      scrub: true,
-    },
-  });
-</script>
