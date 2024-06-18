@@ -79,6 +79,25 @@ const keywords = `${config.city}, ${config.country}, Web Developer, Web Design, 
           }
         });
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16584785328"
+    ></script>
+    <script>
+      //@ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        //@ts-ignore
+        dataLayer.push(arguments);
+      }
+      //@ts-ignore
+      gtag("js", new Date());
+
+      //@ts-ignore
+      gtag("config", "AW-16584785328");
+    </script>
   </head>
   <body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
