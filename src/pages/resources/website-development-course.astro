@@ -1,0 +1,234 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+const title = "Papakura High School | Website Development Course";
+
+const description =
+  "This is the outline for a coding course created by Astro Media aimed to teach high school students how to build an actual beautiful website using Astro JS and GSAP.";
+
+const courseStructure = [
+  {
+    name: "Week 1: Introduction and Setup",
+    goal: "Understand the basics of web development and set up the development environment.",
+    activities: [
+      "Introduction to web development and Astro.js.",
+      "Set up the development environment (VSCode, Git, Node.js).",
+      "Initialize a new Astro.js project.",
+      "Create GitHub repository.",
+      "Initialize Astro.js project.",
+      "Basic Hello World + DaisyUI setup.",
+    ],
+  },
+  {
+    name: "Week 2: Hero Section",
+    goal: "Create the Hero section and learn the basics of HTML and Tailwind CSS.",
+    activities: [
+      "Structure the Hero section in HTML.",
+      "Style the Hero section using Tailwind CSS.",
+      "Add basic GSAP animations.",
+      "Build and style Hero section.",
+      "Implement basic fade-in animation using GSAP.",
+    ],
+  },
+  {
+    name: "Week 3: About Me Section",
+    goal: "Build the About Me section and deepen understanding of HTML and Tailwind CSS.",
+    activities: [
+      "Structure the About Me section in HTML.",
+      "Style the About Me section using Tailwind CSS.",
+      "Add GSAP animations.",
+      "Build and style About Me section.",
+      "Implement slide-in animation using GSAP.",
+    ],
+  },
+  {
+    name: "Week 4: My Skills and Experience Section",
+    goal: "Create the My Skills and Experience section.",
+    activities: [
+      "Structure the My Skills and Experience section in HTML.",
+      "Style the section using Tailwind CSS.",
+      "Build and style My Skills and Experience section.",
+      "Implement staggered animations for skill bars.",
+    ],
+  },
+  {
+    name: "Week 5: Gallery Section",
+    goal: "Create the Gallery section and learn how to handle images and multimedia.",
+    activities: [
+      "Structure the Gallery section in HTML.",
+      "Style the Gallery section using Tailwind CSS.",
+      "Add GSAP animations for images.",
+      "Build and style Gallery section.",
+      "Implement zoom-in animations for gallery images.",
+    ],
+  },
+  {
+    name: "Week 6: Contact Me Section",
+    goal: "Create the Contact Me section and learn to use Netlify forms.",
+    activities: [
+      "Structure the Contact Me section in HTML.",
+      "Style the Contact Me section using Tailwind CSS.",
+      "Add Netlify form integration.",
+      "Build and style Contact Me section.",
+      "Implement form submission with Netlify forms.",
+      "Implement form field animations.",
+    ],
+  },
+  {
+    name: "Week 7: Responsive Design",
+    goal: "Make the website responsive.",
+    activities: [
+      "Introduction to responsive design.",
+      "Apply responsive design techniques using Tailwind CSS.",
+      "Make the Hero, About Me, My Skills and Experience, Gallery, and Contact Me sections responsive.",
+    ],
+  },
+  {
+    name: "Week 8: Navigation and Routing",
+    goal: "Implement navigation and routing between sections.",
+    activities: [
+      "Create a navigation bar and learn basic React JS.",
+      "Add Iconify icons",
+      "Implement smooth scrolling between sections.",
+      "Build and style the navigation bar.",
+      "Implement GSAP smooth scrolling.",
+    ],
+  },
+  {
+    name: "Week 9: Final Touches and Polishing",
+    goal: "Refine and polish the website.",
+    activities: [
+      "Review and refine each section.",
+      "Ensure design consistency and smooth animations.",
+      "Make final adjustments to styling and animations.",
+      "Test and debug each section.",
+    ],
+  },
+  {
+    name: "Week 10: Testing and Debugging",
+    goal: "Test the website and fix any issues.",
+    activities: ["Test your friend's website", "Be honest and give feedback"],
+  },
+  {
+    name: "Week 11: Going Crazy with Styling",
+    goal: "Taking your Tailwind and GSAP to the next level.",
+    activities: [
+      "Scroll trigger",
+      "Browse random DaisyUI components",
+      ,
+      "Add a beat to your website",
+    ],
+  },
+  {
+    name: "Week 12: Deployment",
+    goal: "Deploy the website to Netlify.",
+    activities: [
+      "Set up Netlify account.",
+      "Deploy the website to Netlify.",
+      "Setup custom domain.",
+    ],
+  },
+  {
+    name: "Week 13: Presentation and Review",
+    goal: "Present the project and review the course.",
+    activities: [
+      "Prepare presentation of the website.",
+      "Reflect on what was learned.",
+      "Create and deliver presentation.",
+      "Discuss lessons learned and future improvements.",
+    ],
+  },
+];
+---
+
+<Layout title={title} description={description} navTop>
+  <div class="flex flex-col gap-16 bg-default py-32 px-2 max-md:gap-8">
+    <section>
+      <div
+        class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center gap-4 text-center"
+      >
+        <h1 class="font-bold text-9xl">
+          Papakura High School's Website Development Course
+        </h1>
+        <h2 class="font-light italic text-primary">By Astro Media NZ</h2>
+      </div>
+    </section>
+    <section>
+      <div class="mx-auto flex max-w-screen-xl flex-col font-light">
+        <p>
+          <span class="mr-4 font-bold text-6xl">Kia Ora, Welcome.</span> If you are
+          reading this, you are most likely a student from a course that we are teaching
+          at your high school. But if not, feel free to learn along as well. This
+          course will teach you how to make your own website that could be your personal
+          portfolio, a website about your iwi/ancestry or even for a side hustle.
+          We don't want you to make a cookie-cutter barely passable site, we want
+          you to come out with something that will last a lifetime. This website
+          will be a reflection of you, so we want it to be <span
+            class="font-bold">GOATED</span
+          >.
+        </p>
+      </div>
+    </section>
+    <section class="mx-auto flex w-full max-w-screen-xl flex-col gap-4">
+      <h1 class="text-4xl">The Requirements:</h1>
+      <ul>
+        <li class="ml-8 max-md:ml-4">1. This will be a 13-week course.</li>
+        <li class="ml-8 max-md:ml-4">
+          2. You will need <a
+            class="link-primary link"
+            target="_blank"
+            href="https://nodejs.org/en/download/package-manager">Node JS</a
+          >
+          installed on your machine.
+        </li>
+        <li class="ml-8 max-md:ml-4">
+          3. You will need a code editor, we recommend <a
+            class="link-primary link"
+            target="_blank"
+            href="https://code.visualstudio.com/download">VS Code</a
+          >.
+        </li>
+        <li class="ml-8 max-md:ml-4">
+          4. You will need <a
+            class="link-primary link"
+            target="_blank"
+            href="https://www.git-scm.com/downloads">git</a
+          > for version control.
+        </li>
+      </ul>
+      <h1>
+        As of June 2024, there is a NZQA unit standard called <a
+          class="link-primary link"
+          target="_blank"
+          href="https://www.nzqa.govt.nz/nqfdocs/units/pdf/29788.pdf"
+          >Develop, test, and evaluate an interactive website for organisational
+          use (29788)</a
+        > which we will be following also.
+      </h1>
+    </section>
+    <section>
+      <div class="mx-auto flex max-w-screen-xl flex-col gap-8">
+        <h1 class="text-center text-6xl">The Course Structure</h1>
+        <p class="text-center">This course will last 13 weeks more or less.</p>
+        <div class="flex flex-col gap-8">
+          {
+            courseStructure.map((course) => (
+              <div class="flex flex-col gap-2">
+                <h1 class="font-medium text-4xl">{course.name}</h1>
+                <h2>Goal: {course.goal}</h2>
+                <div>
+                  <h2>Activities:</h2>
+                  <ul>
+                    {course.activities.map((activity) => (
+                      <li class="ml-8 italic max-md:ml-4">- {activity}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
