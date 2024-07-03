@@ -8,7 +8,7 @@ const description =
 
 const courseStructure = [
   {
-    name: "Week 1: Introduction and Setup",
+    name: "Introduction and Setup",
     goal: "Understand the basics of web development and set up the development environment.",
     activities: [
       "Introduction to web development and Astro.js.",
@@ -20,7 +20,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 2: Hero Section",
+    name: "Hero Section",
     goal: "Create the Hero section and learn the basics of HTML and Tailwind CSS.",
     activities: [
       "Structure the Hero section in HTML.",
@@ -31,7 +31,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 3: About Me Section",
+    name: "About Me Section",
     goal: "Build the About Me section and deepen understanding of HTML and Tailwind CSS.",
     activities: [
       "Structure the About Me section in HTML.",
@@ -42,7 +42,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 4: My Skills and Experience Section",
+    name: "My Skills and Experience Section",
     goal: "Create the My Skills and Experience section.",
     activities: [
       "Structure the My Skills and Experience section in HTML.",
@@ -52,7 +52,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 5: Gallery Section",
+    name: "Gallery Section",
     goal: "Create the Gallery section and learn how to handle images and multimedia.",
     activities: [
       "Structure the Gallery section in HTML.",
@@ -63,7 +63,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 6: Contact Me Section",
+    name: "Contact Me Section",
     goal: "Create the Contact Me section and learn to use Netlify forms.",
     activities: [
       "Structure the Contact Me section in HTML.",
@@ -75,7 +75,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 7: Responsive Design",
+    name: "Responsive Design",
     goal: "Make the website responsive.",
     activities: [
       "Introduction to responsive design.",
@@ -84,7 +84,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 8: Navigation and Routing",
+    name: "Navigation and Routing",
     goal: "Implement navigation and routing between sections.",
     activities: [
       "Create a navigation bar and learn basic React JS.",
@@ -95,22 +95,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 9: Final Touches and Polishing",
-    goal: "Refine and polish the website.",
-    activities: [
-      "Review and refine each section.",
-      "Ensure design consistency and smooth animations.",
-      "Make final adjustments to styling and animations.",
-      "Test and debug each section.",
-    ],
-  },
-  {
-    name: "Week 10: Testing and Debugging",
-    goal: "Test the website and fix any issues.",
-    activities: ["Test your friend's website", "Be honest and give feedback"],
-  },
-  {
-    name: "Week 11: Going Crazy with Styling",
+    name: "Going Crazy with Styling",
     goal: "Taking your Tailwind and GSAP to the next level.",
     activities: [
       "Scroll trigger",
@@ -120,7 +105,27 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 12: Deployment",
+    name: "Final Touches and Polishing",
+    goal: "Refine and polish the website.",
+    activities: [
+      "Get that 90+ lighthouse score",
+      "Make sure those animations are smooth",
+      "Add a favicon",
+      "Check your on-page SEO",
+      "Add a 404 page",
+    ],
+  },
+  {
+    name: "Testing and Debugging",
+    goal: "Test the website and fix any issues.",
+    activities: [
+      "Test your friend's website",
+      "Be honest and give feedback",
+      "We are also going to come around and give feedback.",
+    ],
+  },
+  {
+    name: "Deployment",
     goal: "Deploy the website to Netlify.",
     activities: [
       "Set up Netlify account.",
@@ -129,7 +134,7 @@ const courseStructure = [
     ],
   },
   {
-    name: "Week 13: Presentation and Review",
+    name: "Presentation and Review",
     goal: "Present the project and review the course.",
     activities: [
       "Prepare presentation of the website.",
@@ -212,9 +217,11 @@ const courseStructure = [
         <p class="text-center">This course will last 13 weeks more or less.</p>
         <div class="flex flex-col gap-8">
           {
-            courseStructure.map((course) => (
+            courseStructure.map((course, index) => (
               <div class="flex flex-col gap-2">
-                <h1 class="font-medium text-4xl">{course.name}</h1>
+                <h1 class="font-medium text-4xl">
+                  Week {index + 1}: {course.name}
+                </h1>
                 <h2>Goal: {course.goal}</h2>
                 <div>
                   <h2>Activities:</h2>
