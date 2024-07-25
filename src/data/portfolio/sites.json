@@ -1,5 +1,10 @@
 [
   {
+    "title": "Dirt'ee Deeds",
+    "image": "./images/sites/dirteedeeds.png",
+    "url": "/portfolio/dirteedeeds"
+  },
+  {
     "title": "Thor and Co Building",
     "image": "./images/sites/thor.png",
     "url": "/portfolio/thor"
@@ -20,9 +25,19 @@
     "url": "/portfolio/savante-design"
   },
   {
+    "title": "Adria Morgan Studio",
+    "image": "./images/sites/adria.png",
+    "url": "/portfolio/adria"
+  },
+  {
     "title": "Sports Physio NZ",
     "image": "./images/sites/sports-physio.png",
     "url": "/portfolio/sports-physio"
+  },
+  {
+    "title": "Fight Fitt",
+    "image": "./images/sites/fightfitt.png",
+    "url": "/portfolio/fightfitt"
   },
   {
     "title": "The PotCast",

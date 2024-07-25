@@ -10,6 +10,10 @@ description:
   A devoted family man at heart, he integrates his values of kinship and integrity into every project, striving to strengthen and uplift the neighbourhood one build at a time.
 
   His approach goes beyond construction; it's about creating lasting bonds and a resilient community foundation.
-gallery: []
+gallery:
+  [
+    "/src/data/portfolio/images/clients/thor/1.jpeg",
+    "/src/data/portfolio/images/clients/thor/2.jpeg",
+  ]
 url: "https://thorcobuilding.co.nz/"
 ---
