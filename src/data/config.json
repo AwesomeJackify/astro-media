@@ -4,6 +4,14 @@
   "country": "New Zealand",
   "testimonials": [
     {
+      "name": "Marcos Dietrich",
+      "project": "Fight Fitt",
+      "slug": "fightfitt",
+      "testimonial": "The Astromedia team have just finished making a website for me and I am stunned at how great the quality is. I had a designer propose a website for me in the past which I turned down as it really didn't captivate me, but this website I can really see helping my business. Thanks again, guys!",
+      "projectUrl": "/portfolio/fightfitt",
+      "headshot": "fightfitt.png"
+    },
+    {
       "name": "Sam Singh",
       "project": "Victorian Spas",
       "slug": "victorian-spas",
@@ -50,6 +58,14 @@
       "testimonial": "Astro media is the best website developers I have ever worked with. They helped custom code my whole website from scratch for our organization NZ Ethnic Women's Hub and I'm blow away by there work. I highly recommend there services to anyone seeking high quality websites, these guys are the real deal!",
       "projectUrl": "/portfolio/ethnic-women",
       "headshot": "ethnic.png"
+    },
+    {
+      "name": "Lachie Lyster",
+      "project": "Dirt'ee Deeds",
+      "slug": "dirteedeeds",
+      "testimonial": "Otis and Jack at Astro Media are amazing at what they do as well as being super easy to communicate with to make sure everything is how you want it, also being super proactive and quick when it comes to designing your website, cheers boys and thanks again.",
+      "projectUrl": "/portfolio/dirteedeeds",
+      "headshot": "dirteedeeds.png"
     },
     {
       "name": "Blake Davies",
