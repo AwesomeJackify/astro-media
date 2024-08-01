@@ -17,6 +17,7 @@ export function getStaticPaths() {
     { params: { demo: "adria" } },
     { params: { demo: "fightfitt" } },
     { params: { demo: "dirteedeeds" } },
+    { params: { demo: "ar-built" } },
   ];
 }
 
@@ -107,7 +108,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
                 <Image
                   src={clientImages[image]()}
                   alt={data.title}
-                  class="h-full w-full object-cover object-top"
+                  class="h-full w-full object-contain object-center"
                 />
               ))}
             </div>

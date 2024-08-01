@@ -1,5 +1,10 @@
 [
   {
+    "title": "AR Built",
+    "image": "./images/sites/ar-built.png",
+    "url": "/portfolio/ar-built"
+  },
+  {
     "title": "Dirt'ee Deeds",
     "image": "./images/sites/dirteedeeds.png",
     "url": "/portfolio/dirteedeeds"
