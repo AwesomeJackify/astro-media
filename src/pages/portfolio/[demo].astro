@@ -29,7 +29,7 @@ import config from "~/data/config.json";
 
 const { demo } = Astro.params;
 
-const currentDemoEntry = await getEntry("demos", demo);
+const currentDemoEntry: any = await getEntry("demos", demo);
 
 if (!currentDemoEntry) {
   return {
