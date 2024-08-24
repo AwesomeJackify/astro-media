@@ -30,6 +30,11 @@
     "url": "/portfolio/savante-design"
   },
   {
+    "title": "CCWTC",
+    "image": "./images/sites/ccwtc.png",
+    "url": "/portfolio/ccwtc"
+  },
+  {
     "title": "Adria Morgan Studio",
     "image": "./images/sites/adria.png",
     "url": "/portfolio/adria"
