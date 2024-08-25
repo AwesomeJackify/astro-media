@@ -1,0 +1,44 @@
+---
+import Splash from "~/components/splash.astro";
+import Layout from "~/layouts/Layout.astro";
+import CatalogueMain from "~/components/catalogue/CatalogueMain";
+---
+
+<Layout
+  title="Catalogue"
+  description="Are you in need of some extra inspiration? In our free time, we like to experiment and make interesting designs that a client in the future may find useful. So take a scroll and let your mind go wild."
+>
+  <Splash>
+    <h1
+      class="gradient-text mx-8 text-center text-9xl font-extrabold tracking-tighter sm:mx-0"
+    >
+      Catalogue
+    </h1>
+    <h2
+      class="website-tag mx-auto max-w-screen-md text-center text-2xl font-extralight text-white"
+    >
+    </h2>
+  </Splash>
+  <section class="h-[500px]">
+    <CatalogueMain client:load />
+  </section>
+</Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin);
+
+  gsap.to(".website-tag", {
+    //Subtitle animation
+    duration: 2,
+    text: {
+      value:
+        "Are you in need of some extra inspiration? In our free time, we like to experiment and make interesting designs that a client in the future may find useful. So take a scroll and let your mind roam free.",
+      delimiter: " ",
+    },
+  });
+</script>
