@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import config from "~/data/config.json";
 
 const headshotImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/clientHeadshots/*.{jpeg,jpg,png,gif}"
+  "/src/assets/clientHeadshots/*.{jpeg,jpg,png,gif,webp}"
 );
 ---
 

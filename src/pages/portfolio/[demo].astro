@@ -45,11 +45,11 @@ const currentTestimonial = config.testimonials.find(
 const data = currentDemoEntry.data;
 
 const heroImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/data/portfolio/images/sites/*.{jpeg,jpg,png,gif}"
+  "/src/data/portfolio/images/sites/*.{jpeg,jpg,png,gif,webp}"
 );
 
 const clientImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/data/portfolio/images/clients/**/*.{jpeg,jpg,png,gif}"
+  "/src/data/portfolio/images/clients/**/*.{jpeg,jpg,png,gif,webp}"
 );
 ---
 
