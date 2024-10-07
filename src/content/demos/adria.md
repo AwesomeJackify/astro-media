@@ -4,4 +4,5 @@ description: Adria is an artist based in Tamaki Makaurau/Auckland, in Aotearoa/N
 
 gallery: []
 url: "https://adriamorganstudio.com/"
+index: false 
 ---
