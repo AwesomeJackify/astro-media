@@ -7,7 +7,8 @@ const demoCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     gallery: z.array(z.string().optional()),
-    url: z.string()
+    url: z.string(),
+    index: z.boolean().default(true), 
   }),
 });
 
