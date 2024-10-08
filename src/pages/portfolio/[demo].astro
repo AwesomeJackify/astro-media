@@ -53,7 +53,7 @@ const clientImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<Layout title={data.title} description={data.description} navTop={true}>
+<Layout title={data.title} description={data.description} navTop={true} index={data.index ?? true}>
   <Image
     src={heroImages[
       "/src/data/portfolio/images/sites/" + currentDemoEntry.slug + ".png"
