@@ -1,5 +1,10 @@
 [
   {
+    "title": "RE3",
+    "image": "./images/sites/re3.png",
+    "url": "/portfolio/re3"
+  },
+  {
     "title": "AR Built",
     "image": "./images/sites/ar-built.png",
     "url": "/portfolio/ar-built"
