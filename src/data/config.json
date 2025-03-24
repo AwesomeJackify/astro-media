@@ -4,6 +4,14 @@
   "country": "New Zealand",
   "testimonials": [
     {
+      "name": "Tim Max",
+      "project": "RE3",
+      "slug": "re3",
+      "testimonial": "Great work!! Best team, best support, they work really hard and it shows. Happy as with my website!",
+      "projectUrl": "/portfolio/re3",
+      "headshot": "re3.png"
+    },
+    {
       "name": "Freedom Anae Feulufai",
       "project": "AR Built",
       "slug": "ar-built",
