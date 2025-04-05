@@ -37,7 +37,6 @@
     "@react-icons/all-files": "^4.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "caniuse-lite": "^1.0.30001616",
     "dayjs": "^1.11.11",
     "gsap": "^3.12.5",
     "micromodal": "^0.4.10",
