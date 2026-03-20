@@ -1,8 +1,18 @@
 [
   {
+    "title": "Elevate Studios",
+    "image": "./images/sites/elevate-studios.png",
+    "url": "/portfolio/elevate-studios"
+  },
+  {
     "title": "RE3",
     "image": "./images/sites/re3.png",
     "url": "/portfolio/re3"
+  },
+  {
+    "title": "Ground Pro",
+    "image": "./images/sites/ground-pro.png",
+    "url": "/portfolio/ground-pro"
   },
   {
     "title": "AR Built",
